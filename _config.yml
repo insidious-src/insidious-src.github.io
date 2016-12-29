@@ -1,0 +1,75 @@
+# Site settings
+title: The Insidious One
+description: Personal Portfolio, IT Support
+tagline: C++ Programmer / Web Developer / Designer based in Burgas, Bulgaria
+keywords: it,personal,portfolio,project,projects,contact,library,website,web development,developing,technologies,design,art,freelance,developer,building websites,wallpaper,logo,photo,photoshop,html5,css3,javascript,3d modeling,programming,c++,cxx,c,c99,c11,cxx11,c++11,krita,blender,electronics,engine,support
+author: Kiril Petrov
+slogan: Absolute determination. When I do something I just don’t care how hard it is.
+first_published: 2008
+email: fymfifa@gmail.com
+donate_url: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WMW75J9ZWHXAU
+
+enforce_ssl: insidious-src.tech
+url: https://insidious-src.tech
+baseurl: /
+timezone: Europe/London
+encoding: utf-8
+permalink: /:categories/:title/
+newsfeed_max: 4
+google_analytics_id: UA-86048189-3
+
+freelance_status: available
+freelance_message:
+    available: I am currently available for hire. Feel <del>free</del> obligated to contact me at any time.
+    busy: I am probably working on some big project right now and can't really take your order.
+    away: I am not taking any orders at this time. Check back in a few days.
+
+social:
+    #twitter:
+    github: https://github.com/insidious-src
+    #linkedin-square:
+    #facebook-official:
+    google-plus-square: https://plus.google.com/u/0/103914350235946753433
+    email: fymfifa@gmail.com
+    #flickr:
+    #instagram:
+    youtube-square: https://www.youtube.com/user/fymfifa
+    #spotify:
+    #stack-overflow:
+    #vimeo:
+    #reddit:
+    #stubleupon:
+    #delicious:
+    #pied-piper:
+    #digg:
+    #soundcloud:
+    #deviantart:
+    #angellist:
+    #tumblr-square:
+    #stackexchange:
+    #weibo:
+    #trello:
+    #foursquare:
+    #linux:
+    #bitbucket-square:
+    #vk:
+    #slack:
+    #vine:
+    #weixin:
+    #yelp:
+    #skyatlas:
+    #leanpub:
+    #connectdevelop:
+    #ils:
+    #forumbee:
+    #tripadvisor:
+    #amazon:
+
+# Build settings
+markdown: kramdown
+
+sass:
+    style: compressed
+
+compress_html:
+    clippings: all

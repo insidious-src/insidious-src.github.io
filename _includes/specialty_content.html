@@ -1,0 +1,26 @@
+<section>
+	<h4>Specialties</h4>
+	<blockquote>{{ page.description }}</blockquote>
+    <hr>
+    <h5>Sorted by date</h5>
+    <div class="box alt">
+        <div class="row uniform 50%">
+            {% assign numProjects = 0 %}
+            {% for post in site.posts %}
+            {% if post.tags contains page.tag %}
+                {% assign numProjects = numProjects | plus: 1 %}
+            <div class="4u 6u(small) 10u(vsmall) 12u(xsmall)">
+                <a href="{{ post.url | remove:'.html' | prepend: site.baseurl | replace: '//','/' }}"
+                 class="image fit shadow">
+                    <h4 class="overlay"><span>{{ post.title }}</span></h4>
+                    <img src="{{ post.thumb | prepend: 'img/' | prepend: site.baseurl }}" alt="{{ post.title }}" />
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% if numProjects == 0 %}
+            <p>Sorry, I haven't published anything here yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</section>

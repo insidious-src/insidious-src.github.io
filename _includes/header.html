@@ -1,0 +1,36 @@
+<header id="header"{% if page.layout == 'home_layout' %} class="alt"{% endif %}>
+    <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+    <nav id="nav">
+        <ul>
+            <li class="special">
+                <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                <div id="menu">
+                    <ul class="conduit-border">
+                        <li><a href="{{ site.baseurl }}" class="icon fa-home"> Home</a></li>
+                        {% for page in site.pages %}
+                        {% if page.type == 'information' or page.type == 'showcase' %}
+                        <li>
+                            <a href="{{ page.url | prepend: site.baseurl | replace: '//','/' }}"
+                             class="icon {{ page.icon }}" title="{{ page.title }}"
+                             > {{ page.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                        <li>
+                            <a href="{{ 'feed.xml' | prepend: site.baseurl }}" class="icon fa-feed" title="Feed"
+                             > Feed</a>
+                        </li>
+                    </ul>
+                    {% if page.layout == 'home_layout' %}
+                    <ul class="conduit-border">
+                        <h5>Jump To</h5>
+                        <li><a href="#two">Lastest Projects</a></li>
+                        <li><a href="#three">Specialties</a></li>
+                        <li><a href="#cta">Freelance Status</a></li>
+                    </ul>
+                    {% endif %}
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>

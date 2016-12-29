@@ -1,0 +1,21 @@
+---
+layout: default_layout
+---
+<article id="main">
+
+    <header>
+        <h2>{{ page.title }}</h2>
+        {% if page.tagline %}
+        <p>{{ page.tagline }}</p>
+        {% else %}
+        <p>{{ site.slogan }}</p>
+        {% endif %}
+    </header>
+
+    <section class="wrapper style5">
+        <div class="inner">
+            {{ content }}
+        </div>
+    </section>
+
+</article>

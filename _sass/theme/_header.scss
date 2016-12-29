@@ -1,0 +1,97 @@
+// Header
+
+#page-wrapper > header {
+    @include vendor('transition', 'background-color #{_duration(transitions)} ease');
+    background: _palette(bg);
+    font-family: _font(special);
+    height: 3em;
+    left: 0;
+    line-height: 3em;
+    padding: 0 1.1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: _misc(z-index-base);
+
+    h1 {
+        @include vendor('transition', 'opacity #{_duration(transitions)} ease');
+        display: inline-block;
+        font-size: 1.1em;
+        height: inherit;
+        line-height: inherit;
+        margin: 0;
+        padding-right: 1.1em;
+
+        a {
+            border: 0;
+            display: block;
+            height: inherit;
+            line-height: inherit;
+            margin: 0;
+            padding-top: .15em;
+
+            @include breakpoint(small) {
+                font-size: .8em;
+            }
+        }
+    }
+
+    nav {
+        display: inline-block;
+        float: right;
+        height: inherit;
+        line-height: inherit;
+
+        > ul {
+            height: inherit;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            white-space: nowrap;
+
+            > li {
+                height: inherit;
+
+                > a {
+                    border: 0;
+                    color: _palette(fg-bold);
+                    display: block;
+                    font-size: 1.1em;
+                    letter-spacing: _size(letter-spacing-alt);
+                    text-transform: uppercase;
+
+                    &.menuToggle {
+                        @include icon-after(_fa-icon(menu));
+                        height: inherit;
+                        outline: 0;
+                        text-align: right;
+
+                        &::after {
+                            font-size: 1.1em;
+                            margin-left: .2em;
+                        }
+
+
+                        span {
+                            height: inherit;
+                            padding-top: 0;
+
+                            @include breakpoint(small) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.alt {
+        background: transparent;
+
+        h1 {
+            @include vendor('pointer-events', 'none');
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+---
+layout: home_layout
+title: Developing Quality Technologies
+newsfeed_max: 4
+---
+<!-- Banner -->
+<section id="banner">
+    <div class="inner">
+        <p><a href="#three" class="logo" aria-hidden="true"><i class="fa fa-user-secret"></i></a></p>
+        <h2>{{ site.title }}</h2>
+        <p>{{ site.tagline }}</p>
+        <ul class="actions">
+            <li>
+                <a href="{{ 'portfolio/' | prepend: site.baseurl }}"
+                  class="button special icon fa-folder">Portfolio</a>
+            </li>
+            <li>
+                <a href="{{ site.donate_url | url_escape }}" title="Donate"
+                  class="button special icon fa-paypal" target="new">Donate</a>
+            </li>
+        </ul>
+    </div>
+    <a href="#one" class="more scrolly">Learn Less</a>
+</section>
+
+<!-- Two -->
+<section id="one" class="wrapper style1 special">
+    <div class="inner">
+        <header class="major">
+            <h2>The Portfolio's Latest</h2>
+            <p>{{ site.slogan }}</p>
+        </header>
+    </div>
+</section>
+
+<section id="two" class="wrapper alt style2">
+{% assign post_limit = page.newsfeed_max %}
+{% for post in site.posts %}
+{% if post.category == 'Project' %}
+{% if post_limit != 0 %}
+<section class="spotlight">
+    <div class="image">
+        <a href="{{ post.url | remove: '.html' | prepend: site.baseurl | replace: '//','/' }}"
+          title="{{ post.title }}">
+            <img src="{{ post.thumb | prepend: 'img/' | prepend: site.baseurl }}"
+             alt="{{ post.title }}" title="{{ post.title }}">
+        </a>
+    </div>
+    <div class="content">
+        <article>
+            <h2>
+                <a href="{{ post.url | remove: '.html' | prepend: site.baseurl | replace: '//','/' }}"
+                  title="{{ post.title }}">{{ post.title }}</a>
+            </h2>
+            <h5>{{ post.description }}</h5>
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+                <i>{{ post.date | date: "%a, %B %-d, %Y" }}</i>
+            </time>
+            <p class="icon fa-quote-left"> {{ post.tagline }} <span class="icon fa-quote-right"></span></p>
+        </article>
+    </div>
+</section>
+{% assign post_limit = post_limit | minus: 1 %}
+{% endif %}
+{% endif %}
+{% endfor %}
+</section>
+
+<!-- Three -->
+<section id="three" class="wrapper style3 special">
+    <div class="inner">
+        <header class="major">
+            <h2>Specialties</h2>
+            <p>If you choose to hire me you should know what I can offer</p>
+        </header>
+        <ul class="features">
+            {% for curpage in site.pages %}
+            {% if curpage.type == 'specialty' %}
+                {% assign numProjects = 0 %}
+                {% for post in site.posts %}
+                    {% if post.tags contains curpage.tag %}
+                        {% assign numProjects = numProjects | plus: 1 %}
+                    {% endif %}
+                {% endfor %}
+            <li class="icon {{ curpage.icon }}">
+                <h3>
+                    <a href="{{ curpage.url | remove: '.html' | prepend: site.baseurl | replace: '//','/' }}"
+                      title="{{ curpage.title }}">{{ curpage.title }}</a>
+                </h3>
+                <h6>{{ numProjects }} Project(s)</h6>
+                <p>{{ curpage.description }}</p>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+<!-- Four -->
+<section id="cta" class="wrapper style4">
+    <div class="inner">
+        <header>
+            <h2>Freelance Status</h2>
+            {% for status in site.freelance_message %}
+            {% if status[0] == site.freelance_status %}
+            <p>{{ status[1] }}</p>
+            {% endif %}
+            {% endfor %}
+        </header>
+        <ul class="actions vertical">
+            <li>
+                <a href="{{ 'about/' | prepend: site.baseurl }}" title="About"
+                  class="button fit special icon fa-user">About</a>
+            </li>
+            <li>
+                <a href="{{ 'contact/' | prepend: site.baseurl }}" title="Contact"
+                  class="button fit special icon fa-envelope">Contact</a>
+            </li>
+        </ul>
+    </div>
+</section>

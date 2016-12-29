@@ -1,0 +1,46 @@
+@import 'skel'  ;
+@import 'mixins';
+
+@include skel-breakpoints((
+        xlarge: '(max-width: 1680px)',
+        large:  '(max-width: 1280px)',
+        medium: '(max-width: 980px)' ,
+        small:  '(max-width: 736px)' ,
+        vsmall: '(max-height: 575px)',
+        xsmall: '(max-width: 480px)'
+    ));
+
+* {
+    @include vendor('box-sizing', 'border-box');
+}
+
+@include viewport {
+    width: device-width;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$imgurl}/banner.jpg")'));
+    background-attachment: fixed;
+    background-color: _palette(bg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.is-loading {
+        *,
+        *::before,
+        *::after {
+            @include vendor('animation', 'none !important');
+            @include vendor('transition', 'none !important');
+        }
+    }
+
+    #page-wrapper {
+        padding-top: 0;
+    }
+}

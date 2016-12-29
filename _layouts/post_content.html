@@ -1,0 +1,57 @@
+---
+layout: default_layout
+---
+<article id="main">
+    <header>
+        <h2>{{ page.title }}</h2>
+        {% if page.tagline %}
+        <p>{{ page.tagline }}</p>
+        {% else %}
+        <p>{{ site.slogan }}</p>
+        {% endif %}
+    </header>
+    <section class="wrapper style5">
+        <div class="inner">
+            <time datetime="{{ page.date | date: '%Y-%m-%d' }}" id="calendar" class="image right">
+                <strong>{{ page.date | date: '%Y<br>%B' }}</strong>
+                <span>{{ page.date | date: "%-d" }}</span>
+                <em>{{ page.date | date: "%A" }}</em>
+            </time>
+
+            {% if page.status %}
+            {% if page.status == 'finished' %}
+            <h3 class="icon fa-check">
+            {% elsif page.status == 'wip' %}
+            <h3 class="icon fa-clock-o">
+            {% elsif page.status == 'abandoned' %}
+            <h3 class="icon fa-close">
+            {% else %}
+            <h3 class="icon fa-question">
+            {% endif %}
+            {% else %}
+            <h3>
+            {% endif %}
+                {{ page.description }}
+            </h3>
+
+            {% if page.role %}
+            <p class="image right">
+                <i>Role</i><br>{{ page.role }}
+            </p>
+            {% endif %}
+
+            {% if page.client %}
+            <p><i>For</i><br><a href="{{ page.client_url }}">{{ page.client }}</a></p>
+            {% endif %}
+
+            <p>
+                <i>Tags</i><br>
+                {% for tag in page.tags %}
+                {{ tag | xml_escape | append: ' ' }}
+                {% endfor %}
+            </p>
+
+            {{ content }}
+        </div>
+    </section>
+</article>

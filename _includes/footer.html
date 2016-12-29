@@ -1,0 +1,29 @@
+<footer id="footer" itemscope itemtype="https://schema.org/Person">
+    <ul class="icons">
+        {% for service in site.social %}
+        {% if service[1] %}
+        {% if service[0] == 'email' %}
+        <li><a itemprop="email" target="_top" href="mailto:{{ service[1] | url_encode }}" class="icon fa-envelope-o"
+             ><span class="label">{{ service[1] | url_encode }}</span></a></li>
+        {% else %}
+        <li><a target="_blank" href="{{ service[1] | url_escape }}" class="icon fa-{{ service[0] }}"
+            ><span class="label">{{ service[0] }}</span></a></li>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </ul>
+    <ul class="copyright">
+        <li>&copy; {% assign thisyear = site.time | date: "%Y" %}
+        {% if site.first_published %}
+        {% capture diff %}{{ site.first_published | minus:thisyear }}{% endcapture %}
+        {% if diff contains '-' %}{{ site.first_published }} - {% endif %}
+        {% endif %}
+        {{ thisyear }}
+        {% if site.author %}
+        <span itemprop="name">{{ site.author }}</span>.
+        {% else %}
+        <span itemprop="company">{{ site.title }}</span>.
+        {% endif %}
+        All rights reserved. Barely.</li>
+    </ul>
+</footer>

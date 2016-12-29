@@ -1,0 +1,74 @@
+$diameter: 140px;
+$radius: ($diameter / 2);
+$b: ($radius / 8);
+$opacity: .7;
+$dur: 2.3s;
+$logo-fg: rgb(220, 220, 226);
+
+@include keyframe(rotate) {
+    0% {
+        @include vendor('transform', 'rotateZ(0deg) scaleX(1) scaleY(1)');
+    }
+
+    50% {
+        @include vendor('transform', 'rotateZ(180deg) scaleX(0.82) scaleY(0.95)');
+        //border-color: rgba(255, 255, 255, .3);
+    }
+
+    100% {
+        @include vendor('transform', 'rotateZ(360deg) scaleX(1) scaleY(1)');
+    }
+}
+
+@include keyframe(rotate-reverse) {
+    0% {
+        @include vendor('transform', 'rotateZ(0deg) scaleX(1) scaleY(1)');
+    }
+
+    50% {
+        @include vendor('transform', 'rotateZ(-180deg) scaleX(0.95) scaleY(0.9)');
+        //border-color: rgba(255, 255, 255, .3);
+    }
+
+    100% {
+        @include vendor('transform', 'rotateZ(-360deg) scaleX(1) scaleY(1)');
+    }
+}
+
+.logo {
+    @include vendor('font-smoothing', 'antialiased');
+    border: 0;
+    color: $logo-fg;
+    font-family: _font(family);
+    font-size: 3em;
+    height: $diameter;
+    line-height: $diameter;
+    padding: .7em .77em .7em .93em;
+    position: relative;
+    text-align: center;
+    width: $diameter;
+
+    &::after,
+    &::before {
+        border-radius: 100%;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &::after {
+        //@include vendor('animation', 'rotate $dur -0.5s linear infinite');
+        animation: rotate $dur -.5s linear infinite;
+        border-bottom: solid $b rgba(250, 100, 0, $opacity);
+        border-top: solid $b rgba(250, 250, 0, $opacity);
+    }
+
+    &::before {
+        animation: rotate-reverse $dur -.5s linear infinite;
+        border-bottom: solid $b rgba(0, 150, 200, $opacity);
+        border-top: solid $b rgba(0, 250, 150, $opacity);
+    }
+}
