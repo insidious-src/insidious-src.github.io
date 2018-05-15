@@ -9,8 +9,8 @@ first_published: 2008
 email: fymfifa@gmail.com
 donate_url: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WMW75J9ZWHXAU
 
-enforce_ssl: insidious-src.tech
-url: https://insidious-src.tech
+enforce_ssl: insidious-src.github.io
+url: https://insidious-src.github.io
 baseurl: /
 timezone: Europe/London
 encoding: utf-8

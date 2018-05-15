@@ -10,20 +10,19 @@
         xsmall: '(max-width: 480px)'
     ));
 
-* {
-    @include vendor('box-sizing', 'border-box');
-}
-
-@include viewport {
+@include viewport
+{
     width: device-width;
 }
 
 html,
-body {
+body
+{
     height: 100%;
 }
 
-body {
+body
+{
     @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$imgurl}/banner.jpg")'));
     background-attachment: fixed;
     background-color: _palette(bg);
@@ -31,16 +30,21 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
-    &.is-loading {
-        *,
-        *::before,
-        *::after {
-            @include vendor('animation', 'none !important');
-            @include vendor('transition', 'none !important');
+    &.is-loading
+    {
+        *
+        {
+            &::before,
+            &::after
+            {
+                @include vendor('animation', 'none !important');
+                @include vendor('transition', 'none !important');
+            }
         }
     }
 
-    #page-wrapper {
+    #page-wrapper
+    {
         padding-top: 0;
     }
 }

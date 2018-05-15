@@ -12,7 +12,6 @@ $logo-fg: rgb(220, 220, 226);
 
     50% {
         @include vendor('transform', 'rotateZ(180deg) scaleX(0.82) scaleY(0.95)');
-        //border-color: rgba(255, 255, 255, .3);
     }
 
     100% {
@@ -27,7 +26,6 @@ $logo-fg: rgb(220, 220, 226);
 
     50% {
         @include vendor('transform', 'rotateZ(-180deg) scaleX(0.95) scaleY(0.9)');
-        //border-color: rgba(255, 255, 255, .3);
     }
 
     100% {

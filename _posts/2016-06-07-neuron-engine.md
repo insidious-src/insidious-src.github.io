@@ -57,3 +57,52 @@ status: wip
 - Sports (ex. Pro Evolution Soccer, FIFA & NBA 2K)
 - Real-Time Strategy (ex. StarCraft)
 - MMO - (ex. PlanetSide & World of Warcraft) -> still not sure
+
+==== Engine Modules ====
+
+Input Module (Support for different devices)
+Renderer Module (OpenGL, OpenGLES & Direct3D)
+Physics Module
+Audio Module
+Resource Module
+Network Module
+Artificial Intelligence Module
+Scene Management Module (Updates the renderer according to its module dependancies)
+
+
+==== Module Plan ====
+
+Input Module:
+- only one thread to decide how to handle and recognize multiple input events
+
+Audio Module:
+- a thead which processes messages and spawns more threads to play audio files in parallel
+
+Network Module:
+- a thread to constantly recieve and send data
+- and a second thead to analyze the data
+
+Renderer Module:
+- a thead for messaging and matrix manipulation; manages more threads depending
+on the number of visible objects
+- Raster rendering method
+- Raster & Ray-Tracking hybrid rendering method (OpenGL + OpenCL/CUDA)
+
+Resource Modules:
+- only one thread to manage specific resource type (ex. models, audio files, textures, save files, etc.)
+- all resource modules share common encryption/decryption algorithm
+
+Physics Module:
+- a main thread to process messages and environmental laws of physics; manages more
+threads depending on the number of dynamic objects
+
+Artificial Intelligence Module:
+- a thread to process messages between AI objects; manages more threads depending
+on the number of AI objects
+
+Scene Management Module:
+- only one thread to construct the whole scene
+
+=====================================
+
+total threads: 9 ensured + extra (depending on module type)

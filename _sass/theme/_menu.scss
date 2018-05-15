@@ -1,3 +1,6 @@
+$empty       : ''              ;
+$transparent : rgba(0, 0, 0, 0);
+
 // Page Wrapper + Menu
 
 #page-wrapper {
@@ -5,8 +8,8 @@
     opacity: 1;
 
     &::before {
-        background: rgba(0, 0, 0, 0);
-        content: '';
+        background: $transparent;
+        content: $empty;
         display: none;
         height: 100%;
         left: 0;
@@ -94,16 +97,18 @@
     }
 }
 
-body.is-menu-visible {
-    #page-wrapper {
-        opacity: .9;
+body {
+    .is-menu-visible {
+        #page-wrapper {
+            opacity: .9;
 
-        &::before {
-            display: block;
+            &::before {
+                display: block;
+            }
         }
-    }
 
-    #menu {
-        @include vendor('transform', 'translateX(0)');
+        #menu {
+            @include vendor('transform', 'translateX(0)');
+        }
     }
 }

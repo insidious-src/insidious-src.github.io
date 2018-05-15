@@ -4,6 +4,7 @@
 @import 'skel'       ;
 @import 'fontawesome';
 @import 'fonts'      ;
+@import 'library-buttons';
 
 @include skel-breakpoints((
         xlarge: '(max-width: 1680px)',
@@ -208,11 +209,11 @@ header {
         top: -0.25em;
     }
 
-    h1 + p {
-    }
+    //h1 + p {
+    //}
 
-    h2 + p {
-    }
+    //h2 + p {
+    //}
 
     h3 + p {
         font-size: 1.1em;
@@ -687,9 +688,9 @@ input[type="button"],
 button,
 .button {
     @include vendor('appearance', 'none');
-    @include vendor('transition', ('background-color #{_duration(transitions)} ease-in-out', 'color #{_duration(transitions)} ease-in-out'));
+    @include vendor('transition', '#{_duration(transitions)} ease-in-out');
     background-color: transparent;
-    border-radius: 3px;
+    border-radius: 6px;
     border: 0;
     box-shadow: inset 0 0 0 2px _palette(border);
     color: _palette(fg-bold);
@@ -697,9 +698,10 @@ button,
     display: inline-block;
     font-size: 0.8em;
     font-weight: _font(weight-bold);
-    height: 3.125em;
+    height: 3.525em;
     letter-spacing: _size(letter-spacing-alt);
     line-height: 3.125em;
+    outline: none;
     padding: 0 2.75em;
     text-align: center;
     text-decoration: none;
@@ -736,27 +738,7 @@ button,
         font-size: 1.35em;
     }
 
-    &.special {
-        background-color: _palette(accent6, bg);
-        box-shadow: none !important;
-        color: _palette(accent6, fg-bold) !important;
-
-        &:hover {
-            background-color: lighten(_palette(accent6, bg), 5) !important;
-        }
-
-        &:active {
-            background-color: darken(_palette(accent6, bg), 5) !important;
-        }
-    }
-
-    &.theme {
-        @include vendor('background', 'linear-gradient(to bottom, rgb(56, 61, 77), rgb(128, 140, 176), rgb(65, 72, 90))');
-        border-left : solid 4px rgba(100, 100, 150, 1.0);
-        border-right: solid 4px rgba(100, 100, 150, 1.0);
-        border-radius: 0;
-        box-shadow: none !important;
-    }
+    @include button-flat-3d('&.special', _palette(accent6, bg), _palette(accent6, fg));
 
     &.disabled,
     &:disabled {

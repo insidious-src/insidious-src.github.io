@@ -6,234 +6,238 @@
 
     // Basic
 
-        strong, b {
-            color: _palette($p, fg-bold);
-        }
+    strong, b {
+        color: _palette($p, fg-bold);
+    }
 
-        h2, h3, h4, h5, h6 {
-            color: _palette($p, fg-bold);
-        }
+    h2, h3, h4, h5, h6 {
+        color: _palette($p, fg-bold);
+    }
 
-        hr {
-            border-color: _palette($p, border);
-        }
+    hr {
+        border-color: _palette($p, border);
+    }
 
-        blockquote {
-            border-color: _palette($p, border);
-        }
+    blockquote {
+        border-color: _palette($p, border);
+    }
 
-        code {
-            background: _palette($p, border-bg);
-        }
+    code {
+        background: _palette($p, border-bg);
+    }
 
     // Section/Article
 
-        header {
+    header {
+        p {
+            color: _palette($p, fg-light);
+        }
+
+        &.major {
+            h2, h3, h4, h5, h6 {
+                border-color: _palette($p, border);
+            }
+
             p {
-                color: _palette($p, fg-light);
-            }
-
-            &.major {
-                h2, h3, h4, h5, h6 {
-                    border-color: _palette($p, border);
-                }
-
-                p {
-                    color: _palette($p, fg);
-                }
+                color: _palette($p, fg);
             }
         }
+    }
 
-        time
+    time
+    {
+        background-color: #fff;
+        box-shadow: 0 1px 0 #fa565a, 0 2px 0 #fff, 0 0 0 1px #fa565a;
+        display: block;
+        font-size: 1em; /* change icon size */
+        height: 8.5em;
+        overflow: hidden;
+        position: relative;
+        width: 7em;
+
+        &#calendar
         {
-          font-size: 1em; /* change icon size */
-          display: block;
-          position: relative;
-          width: 7em;
-          height: 8.5em;
-          background-color: #fff;
-          box-shadow: 0 1px 0 #fa565a, 0 2px 0 #fff, 0 0 0 1px #fa565a;
-          overflow: hidden;
+            strong
+            {
+                color: #fff;
+            }
         }
 
-        time *
+        *
         {
-          display: block;
-          width: 100%;
-          font-size: 1em;
-          font-weight: bold;
-          font-style: normal;
-          text-align: center;
+            display: block;
+            font-size: 1em;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
         }
 
-        time strong
+        strong
         {
-          position: absolute;
-          top: 0;
-          padding: 0.2em 0;
-          background-color: #fa565a;
-          border-bottom: 2px solid #fa565a;
+            background-color: #fa565a;
+            border-bottom: 2px solid #fa565a;
+            padding: .2em 0;
+            position: absolute;
+            top: 0;
         }
 
-        time em
+        em
         {
-          position: absolute;
-          bottom: 0.3em;
-          color: #fa895a;
+            bottom: 0.3em;
+            color: #fa895a;
+            position: absolute;
         }
 
-        time span
+        span
         {
-          font-size: 2.8em;
-          letter-spacing: -0.05em;
-          padding-top: 1.6em;
-          color: #4c566b;
+            color: #4c566b;
+            font-size: 2.8em;
+            letter-spacing: -0.05em;
+            padding-top: 1.6em;
         }
-
-        time#calendar strong {
-            color: #fff;
-        }
+    }
 
     // Form
 
-        label {
-            color: _palette($p, fg-bold);
-        }
+    label {
+        color: _palette($p, fg-bold);
+    }
 
-        input[type="text"],
-        input[type="password"],
-        input[type="email"],
-        select,
-        textarea {
-            background: _palette($p, field-bg);
-        }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    select,
+    textarea {
+        background: _palette($p, field-bg);
+    }
 
-        .select-wrapper {
+    .select-wrapper {
+        &::before {
+            color: _palette($p, border);
+        }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        & + label {
+            color: _palette($p, fg);
+
             &:before {
-                color: _palette($p, border);
+                background: _palette($p, border-bg);
             }
         }
 
-        input[type="checkbox"],
-        input[type="radio"] {
-            & + label {
-                color: _palette($p, fg);
-
-                &:before {
-                    background: _palette($p, border-bg);
-                }
-            }
-
-            &:checked + label {
-                &:before {
-                    background: _palette($p, fg-bold);
-                    color: _palette($p, bg);
-                }
+        &:checked + label {
+            &::before {
+                background: _palette($p, fg-bold);
+                color: _palette($p, bg);
             }
         }
+    }
 
-        ::-webkit-input-placeholder {
-            color: _palette($p, fg-light) !important;
-        }
+    ::-webkit-input-placeholder {
+        color: _palette($p, fg-light) !important;
+    }
 
-        :-moz-placeholder {
-            color: _palette($p, fg-light) !important;
-        }
+    :-moz-placeholder {
+        color: _palette($p, fg-light) !important;
+    }
 
-        ::-moz-placeholder {
-            color: _palette($p, fg-light) !important;
-        }
+    ::-moz-placeholder {
+        color: _palette($p, fg-light) !important;
+    }
 
-        :-ms-input-placeholder {
-            color: _palette($p, fg-light) !important;
-        }
+    :-ms-input-placeholder {
+        color: _palette($p, fg-light) !important;
+    }
 
-        .formerize-placeholder {
-            color: _palette($p, fg-light) !important;
-        }
+    .formerize-placeholder {
+        color: _palette($p, fg-light) !important;
+    }
 
     // Icon
 
-        .icon {
-            &.major {
-                border-color: _palette($p, border);
-            }
+    .icon {
+        &.major {
+            border-color: _palette($p, border);
         }
+    }
 
     // List
 
-        ul {
-            &.alt {
-                li {
-                    border-color: _palette($p, border);
-                }
+    ul {
+        &.alt {
+            li {
+                border-color: _palette($p, border);
             }
         }
+    }
 
     // Table
 
-        table {
-            tbody {
-                tr {
-                    border-color: _palette($p, border);
+    table {
+        tbody {
+            tr {
+                border-color: _palette($p, border);
 
-                    &:nth-child(2n + 1) {
-                        background-color: _palette($p, border-bg);
-                    }
+                &:nth-child(2n + 1) {
+                    background-color: _palette($p, border-bg);
                 }
             }
+        }
 
-            th {
-                color: _palette($p, fg-bold);
-            }
+        th {
+            color: _palette($p, fg-bold);
+        }
 
-            thead {
-                border-color: _palette($p, border);
-            }
+        thead {
+            border-color: _palette($p, border);
+        }
 
-            tfoot {
-                border-color: _palette($p, border);
-            }
+        tfoot {
+            border-color: _palette($p, border);
+        }
 
-            &.alt {
-                tbody {
-                    tr {
-                        td {
-                            border-color: _palette($p, border);
-                        }
+        &.alt {
+            tbody {
+                tr {
+                    td {
+                        border-color: _palette($p, border);
                     }
                 }
             }
         }
+    }
 
     // Button
 
-        input[type="submit"],
-        input[type="reset"],
-        input[type="button"],
-        button,
-        .button {
-            box-shadow: inset 0 0 0 2px _palette($p, border);
-            color: _palette($p, fg-bold);
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button,
+    .button {
+        box-shadow: inset 0 0 0 2px _palette($p, border);
+        color: _palette($p, fg-bold);
 
-            &:hover {
-                background-color: _palette($p, border-bg);
-            }
-
-            &:active {
-                background-color: _palette($p, border2-bg);
-            }
+        &:hover {
+            background-color: _palette($p, border-bg);
         }
+
+        &:active {
+            background-color: _palette($p, border2-bg);
+        }
+    }
 
     // Features
 
-        .features {
-            li {
-                @include breakpoint(small) {
-                    border-top-color: _palette($p, border);
-                }
+    .features {
+        li {
+            @include breakpoint(small) {
+                border-top-color: _palette($p, border);
             }
         }
+    }
 
 }
 

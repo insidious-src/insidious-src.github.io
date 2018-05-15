@@ -1,3 +1,5 @@
+$null : 0;
+
 // Header
 
 #page-wrapper > header {
@@ -19,7 +21,7 @@
         font-size: 1.1em;
         height: inherit;
         line-height: inherit;
-        margin: 0;
+        margin: $null;
         padding-right: 1.1em;
 
         a {
@@ -27,7 +29,7 @@
             display: block;
             height: inherit;
             line-height: inherit;
-            margin: 0;
+            margin: $null;
             padding-top: .15em;
 
             @include breakpoint(small) {
@@ -45,7 +47,7 @@
         > ul {
             height: inherit;
             list-style: none;
-            margin: 0;
+            margin: $null;
             padding: 0;
             white-space: nowrap;
 

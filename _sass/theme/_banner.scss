@@ -1,3 +1,5 @@
+$empty : '';
+
 // Banner
 
 #page-wrapper > #banner {
@@ -26,7 +28,7 @@
             @include vendor('transition', 'width .85s ease');
             @include vendor('transition-delay', '.25s');
             background: _palette(fg-bold);
-            content: '';
+            content: $empty;
             display: block;
             height: 2px;
             position: absolute;
@@ -89,7 +91,7 @@
         @include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
         @include vendor('transition-delay', '1.25s');
         background: _palette(bg);
-        content: '';
+        content: $empty;
         display: block;
         height: 100%;
         left: 0;
