@@ -24,9 +24,11 @@ sitemap: 'exclude'
         </loc>
         {% if page.date %}
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-        {% else %}
+        {% else if page.path | file_date | date_to_xmlschema %}
         <lastmod>{{ page.path | file_date | date_to_xmlschema }}</lastmod>
-         {% endif %}
+        {% else %}
+        <lastmod>2018-05-25T00:00:00+01:00</lastmod>
+        {% endif %}
         {% if page.url == site.baseurl or page.type == 'showcase' or page.type == 'specialty'  %}
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
