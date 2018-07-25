@@ -24,10 +24,10 @@ sitemap: 'exclude'
         </loc>
         {% if page.date %}
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-        {% else if page.path | file_date | date_to_xmlschema %}
-        <lastmod>{{ page.path | file_date | date_to_xmlschema }}</lastmod>
-        {% else %}
+        {% else if page.path | file_date | date_to_xmlschema == '1970-01-01T01:00:00+01:00' %}
         <lastmod>2018-05-25T00:00:00+01:00</lastmod>
+        {% else %}
+        <lastmod>{{ page.path | file_date | date_to_xmlschema }}</lastmod>
         {% endif %}
         {% if page.url == site.baseurl or page.type == 'showcase' or page.type == 'specialty'  %}
         <changefreq>daily</changefreq>
