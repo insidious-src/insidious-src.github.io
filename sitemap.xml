@@ -22,7 +22,11 @@ sitemap: 'exclude'
         <loc>
             {{ page.url | remove:'.html' | prepend: site.baseurl | replace: '//','/' | prepend: site.url }}
         </loc>
+        {% if page.date %}
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        {% else %}
         <lastmod>{{ page.path | file_date | date_to_xmlschema }}</lastmod>
+         {% endif %}
         {% if page.url == site.baseurl or page.type == 'showcase' or page.type == 'specialty'  %}
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
