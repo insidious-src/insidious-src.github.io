@@ -97,18 +97,20 @@ $transparent : rgba(0, 0, 0, 0);
     }
 }
 
-body {
-    .is-menu-visible {
-        #page-wrapper {
-            opacity: .9;
+body.is-menu-visible
+{
+    #page-wrapper
+    {
+        opacity: .9;
 
-            &::before {
-                display: block;
-            }
+        &::before
+        {
+            display: block;
         }
+    }
 
-        #menu {
-            @include vendor('transform', 'translateX(0)');
-        }
+    #menu
+    {
+        @include vendor('transform', 'translateX(0)');
     }
 }
