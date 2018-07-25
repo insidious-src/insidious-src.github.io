@@ -6,17 +6,17 @@ sitemap: 'exclude'
 	"name": "{{ site.title }}",
 	"icons": [
 		{
-			"src": "\{{ site.url_dir }}android-chrome-192x192.png",
+			"src": "{{ site.url_dir }}android-chrome-192x192.png",
 			"sizes": "192x192",
-			"type": "image\/png"
+			"type": "image/png"
 		},
 		{
-			"src": "\{{ site.url_dir }}android-chrome-512x512.png",
+			"src": "{{ site.url_dir }}android-chrome-512x512.png",
 			"sizes": "512x512",
-			"type": "image\/png"
+			"type": "image/png"
 		}
 	],
 	"theme_color": "#ffffff",
-	"start_url": "https:\/\/{{ site.enforce_ssl }}\/",
+	"start_url": "https://{{ site.enforce_ssl }}/",
 	"display": "standalone"
 }
