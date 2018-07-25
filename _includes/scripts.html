@@ -1,5 +1,5 @@
 <noscript id="deferred-styles">
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl | append: 'css/stylesheet.css' | append: print_file_version }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'css/stylesheet.css' | prepend: site.baseurl | append: print_file_version }}">
 </noscript>
 <script type="text/javascript">
 {% include js/loadcss.js %}
@@ -10,5 +10,5 @@
 <script async src="{{ 'js/scripts.js' | prepend: site.baseurl }}" type="text/javascript"></script>
 {% endif %}
 <!--[if lte IE 8]>
-<script src="{{ "/js/ie/respond.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
+<script src="{{ "js/ie/respond.min.js' | prepend: site.baseurl }}" type="text/javascript"></script>
 <![endif]-->
