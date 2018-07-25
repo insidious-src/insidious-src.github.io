@@ -13,10 +13,10 @@ status: finished
 ---
 <div class="12u">
     <span class="image fit">
-        <p><img src="{{ site.baseurl }}img/mkdrag3.png" alt="" /></p>
-        <p><img src="{{ site.baseurl }}img/scorpion_vs_kitana.jpg" alt="" /></p>
-        <p><img src="{{ site.baseurl }}img/mileena_vs_kitana.jpg" alt="" /></p>
-        <p><img src="{{ site.baseurl }}img/noobwallpaperil4.jpg" alt="" /></p>
-        <p><img src="{{ site.baseurl }}img/menubackmkid.jpg" alt="" /></p>
+        <p><img src="{{ site.url_dir }}img/mkdrag3.png" alt="" /></p>
+        <p><img src="{{ site.url_dir }}img/scorpion_vs_kitana.jpg" alt="" /></p>
+        <p><img src="{{ site.url_dir }}img/mileena_vs_kitana.jpg" alt="" /></p>
+        <p><img src="{{ site.url_dir }}img/noobwallpaperil4.jpg" alt="" /></p>
+        <p><img src="{{ site.url_dir }}img/menubackmkid.jpg" alt="" /></p>
     </span>
 </div>

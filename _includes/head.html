@@ -14,22 +14,22 @@
     {% else %}
     <meta name="keywords" content="{{ site.keywords | downcase }}">
     {% endif %}
-    <!--[if lte IE 8]><script src="{{ "js/ie/html5shiv.js" | prepend: site.baseurl }}"></script><![endif]-->
+    <!--[if lte IE 8]><script src="{{ "js/ie/html5shiv.js" | prepend: site.url_dir }}"></script><![endif]-->
     {% if page.url contains '.html' %}
-    <link rel="alternate" href="{{ page.url | prepend: site.baseurl | replace: '//','/' | prepend: site.url }}">
+    <link rel="alternate" href="{{ page.url | prepend: site.url_dir | replace: '//','/' | prepend: site.url }}">
     {% else %}
-    <link rel="canonical" href="{{ page.url | prepend: site.baseurl | replace: '//','/' | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | prepend: site.url_dir | replace: '//','/' | prepend: site.url }}">
     {% endif %}
-    {% if page.url == site.baseurl or page.title == site.title or page.type == 'showcase' %}
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ 'feed.xml' | prepend: site.baseurl }}">
+    {% if page.url == site.url_dir or page.title == site.title or page.type == 'showcase' %}
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ 'feed.xml' | prepend: site.url_dir }}">
     {% endif %}
-    <!--[if lte IE 8]><link rel="stylesheet" href="{{ "css/ie8.css" | prepend: site.baseurl }}" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="{{ "css/ie9.css" | prepend: site.baseurl }}" /><![endif]-->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="{{ site.baseurl }}manifest.json">
-    <link rel="mask-icon" href="{{ site.baseurl }}safari-pinned-tab.svg">
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{ "css/ie8.css" | prepend: site.url_dir }}" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{ "css/ie9.css" | prepend: site.url_dir }}" /><![endif]-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url_dir }}apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="{{ site.url_dir }}favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ site.url_dir }}favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="{{ site.url_dir }}manifest.json">
+    <link rel="mask-icon" href="{{ site.url_dir }}safari-pinned-tab.svg">
     <meta name="theme-color" content="#ffffff">
     {% capture critical %}
     {% include critical.scss %}

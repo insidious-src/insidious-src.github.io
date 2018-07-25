@@ -11,9 +11,9 @@ type: showcase
             {% for post in site.posts %}
             {% if post.category == 'Project' %}
             <div class="4u 6u(small) 10u(vsmall) 12u(xsmall)">
-                <a href="{{ post.url | replace:'.html','' | prepend: site.baseurl | replace: '//','/' }}" class="image fit shadow">
+                <a href="{{ post.url | replace:'.html','' | prepend: site.url_dir | replace: '//','/' }}" class="image fit shadow">
                     <h4 class="overlay"><span>{{ post.title }}</span></h4>
-                    <img src="{{ post.thumb | prepend: 'img/' | prepend: site.baseurl }}" alt="{{ post.title }}" />
+                    <img src="{{ post.thumb | prepend: 'img/' | prepend: site.url_dir }}" alt="{{ post.title }}" />
                 </a>
             </div>
             {% endif %}

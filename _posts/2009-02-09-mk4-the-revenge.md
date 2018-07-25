@@ -16,10 +16,10 @@ status: abandoned
             </a>
         </div>
         <div class="4u">
-            <img src="{{ site.baseurl }}img/scrngrabbz8.png" alt="{{ page.title }} Trailer" class="image fit" />
+            <img src="{{ site.url_dir }}img/scrngrabbz8.png" alt="{{ page.title }} Trailer" class="image fit" />
         </div>
         <div class="4u">
-            <img src="{{ site.baseurl }}img/face1wa7.jpg" alt="{{ page.title }} Trailer" class="image fit" />
+            <img src="{{ site.url_dir }}img/face1wa7.jpg" alt="{{ page.title }} Trailer" class="image fit" />
         </div>
     </div>
 </div>

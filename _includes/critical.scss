@@ -1,4 +1,4 @@
-$imgurl: '{{ site.baseurl }}img';
+$imgurl: '{{ site.url_dir }}img';
 
 @import 'reset'       ;
 @import 'vars'        ;

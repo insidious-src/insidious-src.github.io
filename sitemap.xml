@@ -6,7 +6,7 @@ sitemap: 'exclude'
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for post in site.posts %}
     <url>
-        <loc>{{ post.url | remove:'.html' | prepend: site.baseurl | replace: '//','/' | prepend: site.url }}</loc>
+        <loc>{{ post.url | remove:'.html' | prepend: site.url_dir | replace: '//','/' | prepend: site.url }}</loc>
         {% if post.lastmod == null %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         {% else %}
@@ -20,7 +20,7 @@ sitemap: 'exclude'
     {% unless page.sitemap == "exclude" or page.url contains ".css" %}
     <url>
         <loc>
-            {{ page.url | remove:'.html' | prepend: site.baseurl | replace: '//','/' | prepend: site.url }}
+            {{ page.url | remove:'.html' | prepend: site.url_dir | replace: '//','/' | prepend: site.url }}
         </loc>
         {% if page.date %}
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
@@ -29,7 +29,7 @@ sitemap: 'exclude'
         {% else %}
         <lastmod>{{ page.path | file_date | date_to_xmlschema }}</lastmod>
         {% endif %}
-        {% if page.url == site.baseurl or page.type == 'showcase' or page.type == 'specialty'  %}
+        {% if page.url == site.url_dir or page.type == 'showcase' or page.type == 'specialty'  %}
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         {% else %}

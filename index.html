@@ -11,7 +11,7 @@ newsfeed_max: 4
         <p>{{ site.tagline }}</p>
         <ul class="actions">
             <li>
-                <a href="{{ 'portfolio/' | prepend: site.baseurl }}"
+                <a href="{{ 'portfolio/' | prepend: site.url_dir }}"
                   class="button special icon fa-folder">Portfolio</a>
             </li>
             <li>
@@ -40,16 +40,16 @@ newsfeed_max: 4
 {% if post_limit != 0 %}
 <section class="spotlight">
     <div class="image">
-        <a href="{{ post.url | remove: '.html' | prepend: site.baseurl | replace: '//','/' }}"
+        <a href="{{ post.url | remove: '.html' | prepend: site.url_dir | replace: '//','/' }}"
           title="{{ post.title }}">
-            <img src="{{ post.thumb | prepend: 'img/' | prepend: site.baseurl }}"
+            <img src="{{ post.thumb | prepend: 'img/' | prepend: site.url_dir }}"
              alt="{{ post.title }}" title="{{ post.title }}">
         </a>
     </div>
     <div class="content">
         <article>
             <h2>
-                <a href="{{ post.url | remove: '.html' | prepend: site.baseurl | replace: '//','/' }}"
+                <a href="{{ post.url | remove: '.html' | prepend: site.url_dir | replace: '//','/' }}"
                   title="{{ post.title }}">{{ post.title }}</a>
             </h2>
             <h5>{{ post.description }}</h5>
@@ -84,7 +84,7 @@ newsfeed_max: 4
                 {% endfor %}
             <li class="icon {{ curpage.icon }}">
                 <h3>
-                    <a href="{{ curpage.url | remove: '.html' | prepend: site.baseurl | replace: '//','/' }}"
+                    <a href="{{ curpage.url | remove: '.html' | prepend: site.url_dir | replace: '//','/' }}"
                       title="{{ curpage.title }}">{{ curpage.title }}</a>
                 </h3>
                 <h6>{{ numProjects }} Project(s)</h6>
@@ -109,11 +109,11 @@ newsfeed_max: 4
         </header>
         <ul class="actions vertical">
             <li>
-                <a href="{{ 'about/' | prepend: site.baseurl }}" title="About"
+                <a href="{{ 'about/' | prepend: site.url_dir }}" title="About"
                   class="button fit special icon fa-user">About</a>
             </li>
             <li>
-                <a href="{{ 'contact/' | prepend: site.baseurl }}" title="Contact"
+                <a href="{{ 'contact/' | prepend: site.url_dir }}" title="Contact"
                   class="button fit special icon fa-envelope">Contact</a>
             </li>
         </ul>

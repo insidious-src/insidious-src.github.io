@@ -1,23 +1,23 @@
 <header id="header"{% if page.layout == 'home_layout' %} class="alt"{% endif %}>
-    <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+    <h1><a href="{{ site.url_dir }}">{{ site.title }}</a></h1>
     <nav id="nav">
         <ul>
             <li class="special">
                 <a href="#menu" class="menuToggle"><span>Menu</span></a>
                 <div id="menu">
                     <ul class="conduit-border">
-                        <li><a href="{{ site.baseurl }}" class="icon fa-home"> Home</a></li>
+                        <li><a href="{{ site.url_dir }}" class="icon fa-home"> Home</a></li>
                         {% for page in site.pages %}
                         {% if page.type == 'information' or page.type == 'showcase' %}
                         <li>
-                            <a href="{{ page.url | prepend: site.baseurl | replace: '//','/' }}"
+                            <a href="{{ page.url | prepend: site.url_dir | replace: '//','/' }}"
                              class="icon {{ page.icon }}" title="{{ page.title }}"
                              > {{ page.title }}</a>
                         </li>
                         {% endif %}
                         {% endfor %}
                         <li>
-                            <a href="{{ '2018-07-25-feed.xml' | prepend: site.baseurl }}" class="icon fa-feed" title="Feed"
+                            <a href="{{ '2018-07-25-feed.xml' | prepend: site.url_dir }}" class="icon fa-feed" title="Feed"
                              > Feed</a>
                         </li>
                     </ul>
