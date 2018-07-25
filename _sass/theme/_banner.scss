@@ -17,9 +17,10 @@ $empty : '';
         @include vendor('transform', 'scale(1)');
         @include vendor('transition', ('transform .9s ease', 'opacity .5s ease'));
         display: inline-block;
+        font-family: _font(special);
         font-size: 1.75em;
         opacity: 1;
-        padding: .31em 1em;
+        padding: .31em 1em 0;
         position: relative;
         z-index: 1;
 
