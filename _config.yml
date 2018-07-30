@@ -1,10 +1,10 @@
 # Site settings
 title: The Insidious One
 description: Personal Portfolio, IT Support
-tagline: C++ Programmer / Web Developer / Designer based in Burgas, Bulgaria
+tagline: C++ Programmer / Web Developer / Designer
 keywords: it,personal,portfolio,project,projects,contact,library,website,web development,developing,technologies,design,art,freelance,developer,building websites,wallpaper,logo,photo,photoshop,html5,css3,javascript,3d modeling,programming,c++,cxx,c,c99,c11,cxx11,c++11,krita,blender,electronics,engine,support
 author: K. Petrov
-slogan: Absolute determination
+slogan: Absolute Determination
 first_published: 2008
 email: fymfifa@gmail.com
 donate_url: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WMW75J9ZWHXAU
@@ -20,7 +20,7 @@ google_analytics_id: UA-86048189-3
 
 freelance_status: available
 freelance_message:
-    available: I am currently available for hire. Feel free to contact me at any time.
+    available: I am currently available for hire.
     busy: I am probably working on some project right now and can't take your order.
     away: I am not taking any orders at this time. Check back in a few days.
 
