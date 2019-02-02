@@ -1,7 +1,7 @@
 # Site settings
 title: The Insidious One
 description: Personal Portfolio, IT Support
-tagline: C++ Programmer / Web Developer / Designer
+tagline: C++ Programming / Web Development / Electronics
 keywords: it,personal,portfolio,project,projects,contact,library,website,web development,developing,technologies,design,art,freelance,developer,building websites,wallpaper,logo,photo,photoshop,html5,css3,javascript,3d modeling,programming,c++,cxx,c,c99,c11,cxx11,c++11,krita,blender,electronics,engine,support
 author: K. Petrov
 slogan: Absolute Determination
@@ -12,7 +12,7 @@ donate_url: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id
 enforce_ssl: insidious-src.github.io
 url: https://insidious-src.github.io
 url_dir: /
-timezone: Europe/London
+timezone: Europe/Sofia
 encoding: utf-8
 permalink: /:categories/:title/
 newsfeed_max: 4
