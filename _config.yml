@@ -29,7 +29,7 @@ social:
     github: https://github.com/insidious-src
     #linkedin-square:
     #facebook-official:
-    google-plus-square: https://plus.google.com/u/0/103914350235946753433
+    #google-plus-square: https://plus.google.com/u/0/103914350235946753433
     email: fymfifa@gmail.com
     #flickr:
     #instagram:
@@ -51,7 +51,7 @@ social:
     #trello:
     #foursquare:
     #linux:
-    #bitbucket-square:
+    bitbucket: https://bitbucket.org/insidious-src/
     #vk:
     #slack:
     #vine:
