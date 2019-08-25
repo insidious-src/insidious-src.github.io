@@ -58,7 +58,6 @@ $logo-fg: rgb(220, 220, 226);
     }
 
     &::after {
-        //@include vendor('animation', 'rotate $dur -0.5s linear infinite');
         animation: rotate $dur -.5s linear infinite;
         border-bottom: solid $b rgba(250, 100, 0, $opacity);
         border-top: solid $b rgba(250, 250, 0, $opacity);
