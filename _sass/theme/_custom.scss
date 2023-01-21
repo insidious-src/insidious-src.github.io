@@ -321,13 +321,13 @@
 $conduit-width: 1px;
 $conduit-pulse-color: rgb(255, 255, 255);
 
-@include keyframes(conduit-current) {
+@include keyframe(conduit-current) {
     0% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 10%, _palette(accent1, border) 60%) 1;
+        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 5%, _palette(accent1, border) 60%) 1;
     }
 
     5% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 20%, _palette(accent1, border) 60%) 1;
+        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 15%, _palette(accent1, border) 60%) 1;
     }
 
     10% {
@@ -412,7 +412,7 @@ $conduit-pulse-color: rgb(255, 255, 255);
         border-bottom: solid $conduit-width _palette(accent1, border);
         border-left: solid $conduit-width _palette(accent1, border);
         margin: 0 !important;
-        //animation: conduit-current 1s -.5s linear infinite;
+        //@include vendor('animation', 'conduit-current 2s -.5s linear infinite');
 
         &:nth-child(2n) {
             border-left: 0;
