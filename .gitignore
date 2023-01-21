@@ -1,8 +1,9 @@
 # Jekyll ignores
 .sass-cache
-!_site
-_site/**
-!_site/favicon.ico
+#!_site
+#_site/**
+#!_site/favicon.ico
+_site
 .vscode
 .jekyll-metadata
 .imdone
