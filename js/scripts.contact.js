@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: js_minifier
 sitemap: 'exclude'
 ---
 {% include js/jquery.min.js %}
