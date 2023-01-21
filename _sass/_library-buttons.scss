@@ -18,7 +18,7 @@
         &:active {
             @include vendor('animation', 'none');
             @include vendor('text-shadow', ('0 0 1px rgba(0, 0, 0, .5)'));
-            @include vendor('transition', '#{calc(_duration(transitions) / 2)} linear');
+            @include vendor('transition', '#{_duration(transitions) / 2} linear');
             background: linear-gradient(to bottom, lighten($bg, 2), $bg) !important;
             box-shadow: inset 0 -2px 0 0 darken($bg, 25), 0 2px 5px 0 rgba(0, 0, 0, .2) !important;
             padding: .15em 2.75em 0;

@@ -11,9 +11,9 @@
   position: absolute;
   left: -$fa-li-width;
   width: $fa-li-width;
-  top: calc(2 / 14) + em;
+  top: (2 / 14) + em;
   text-align: center;
   &.#{$fa-css-prefix}-lg {
-    left: -$fa-li-width + (calc(4 / 14) + em);
+    left: -$fa-li-width + ((4 / 14) + em);
   }
 }
