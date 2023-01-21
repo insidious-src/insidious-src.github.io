@@ -58,13 +58,15 @@ $logo-fg: rgb(220, 220, 226);
     }
 
     &::after {
-        animation: rotate $dur -.5s linear infinite;
+        //animation: rotate $dur -.5s linear infinite;
+        @include vendor('animation', 'rotate #{$dur} -.5s linear infinite');
         border-bottom: solid $b + px rgba(250, 100, 0, $opacity);
         border-top: solid $b + px rgba(250, 250, 0, $opacity);
     }
 
     &::before {
-        animation: rotate-reverse $dur -.5s linear infinite;
+        //animation: rotate-reverse $dur -.5s linear infinite;
+        @include vendor('animation', 'rotate-reverse #{$dur} -.5s linear infinite');
         border-bottom: solid $b + px rgba(0, 150, 200, $opacity);
         border-top: solid $b + px rgba(0, 250, 150, $opacity);
     }

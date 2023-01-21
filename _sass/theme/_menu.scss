@@ -73,6 +73,11 @@ $transparent : rgba(0, 0, 0, 0);
                 @include breakpoint(small) {
                     line-height: 2.5em;
                 }
+
+                &:hover {
+                    @include vendor('animation', 'electric-pulse 2s 0s linear infinite');
+                    @include animation-text-pulse(electric-pulse, #ff3);
+                }
             }
         }
     }
