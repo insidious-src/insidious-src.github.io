@@ -1,6 +1,6 @@
-$diameter: 140px;
-$radius: ($diameter / 2);
-$b: ($radius / 8);
+$diameter: 140;
+$radius: calc($diameter / 2);
+$b: calc($radius / 8);
 $opacity: .7;
 $dur: 2.3s;
 $logo-fg: rgb(220, 220, 226);
@@ -39,12 +39,12 @@ $logo-fg: rgb(220, 220, 226);
     color: $logo-fg;
     font-family: _font(family);
     font-size: 3em;
-    height: $diameter;
-    line-height: $diameter;
+    height: $diameter + px;
+    line-height: $diameter + px;
     padding: .7em .77em .7em .9em;
     position: relative;
     text-align: center;
-    width: $diameter;
+    width: $diameter + px;
 
     &::after,
     &::before {
@@ -59,13 +59,13 @@ $logo-fg: rgb(220, 220, 226);
 
     &::after {
         animation: rotate $dur -.5s linear infinite;
-        border-bottom: solid $b rgba(250, 100, 0, $opacity);
-        border-top: solid $b rgba(250, 250, 0, $opacity);
+        border-bottom: solid $b + px rgba(250, 100, 0, $opacity);
+        border-top: solid $b + px rgba(250, 250, 0, $opacity);
     }
 
     &::before {
         animation: rotate-reverse $dur -.5s linear infinite;
-        border-bottom: solid $b rgba(0, 150, 200, $opacity);
-        border-top: solid $b rgba(0, 250, 150, $opacity);
+        border-bottom: solid $b + px rgba(0, 150, 200, $opacity);
+        border-top: solid $b + px rgba(0, 250, 150, $opacity);
     }
 }
