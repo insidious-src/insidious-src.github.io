@@ -1,6 +1,6 @@
 $diameter: 140;
-$radius: ($diameter / 2);
-$b: ($radius / 8);
+$radius: _divide($diameter, 2);
+$b: _divide($radius, 8);
 $opacity: .7;
 $dur: 2.3s;
 $logo-fg: rgb(220, 220, 226);

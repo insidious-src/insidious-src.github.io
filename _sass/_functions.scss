@@ -39,3 +39,8 @@
 @function _size($keys...) {
     @return val($size, $keys...);
 }
+
+// calc value
+@function _divide($first, $second) {
+    @return $first / $second;
+}
