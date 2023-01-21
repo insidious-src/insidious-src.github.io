@@ -7,5 +7,5 @@ sitemap: 'exclude'
 {% include js/jquery.scrolly.min.js %}
 {% include js/skel.min.js %}
 {% include js/electricity.js %}
-{% include js/util.js %}
-{% include js/main.js %}
+{% include js/util.min.js %}
+{% include js/main.min.js %}
