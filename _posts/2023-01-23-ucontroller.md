@@ -8,7 +8,7 @@ thumb: uc_thumb.png
 category: Project
 client: Solventer Ltd.
 client_url: https://solventer.eu/
-role: Code, WordPress Implementation
+role: Code
 status: wip
 ---
 
