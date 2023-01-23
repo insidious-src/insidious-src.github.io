@@ -426,24 +426,7 @@ $conduit-pulse-color: rgb(255, 255, 255);
         border-bottom: solid $conduit-width _palette(accent1, border);
         border-left: solid $conduit-width _palette(accent1, border);
         margin: 0 !important;
-        transition: all 0.5s linear;
-        //@include vendor('animation', 'conduit-current 1s 0s linear none');
-        //@include animation-conduit-current(conduit-current, bottom, right);
-
-        // @for $i from 1 through 10 {
-        //     @if $i % 2 == 0 {
-        //         &:nth-child(#{$i}) {
-        //             @include vendor('animation', 'conduit-current-reverse 1s #{$i}s linear none');
-        //             @include animation-conduit-current(conduit-current-reverse, bottom, left);
-        //         }
-        //     }
-        //     @else {
-        //         &:nth-child(#{$i}) {
-        //             @include vendor('animation', 'conduit-current 1s #{$i}s linear none');
-        //             @include animation-conduit-current(conduit-current, bottom, right);
-        //         }
-        //     }
-        // }
+        @include vendor('transition', 'all 0.5s linear');
 
         &:nth-child(2n) {
             border-left: 0;

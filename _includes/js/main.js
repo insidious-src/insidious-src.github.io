@@ -90,24 +90,30 @@
     }
 
     // electric menu
+
+    // get menu items array
     let menu_items = $('#menu_ul li');
+    // animation time in seconds
+    const animation_time = 1;
 
-    function reverse_animation(index)
+    function calc_forward_time(index)
     {
-        if ((index + 1) % 2 == 0)
-        {
-            jQuery(menu_items[index]).css({
-                animation: 'conduit-current-right-top 1s ' + (menu_items.length + (menu_items.length - index)) + 's linear none'
-            });
-        }
-        else
-        {
-            jQuery(menu_items[index]).css({
-                animation: 'conduit-current-left-top 1s ' + (menu_items.length + (menu_items.length - index)) + 's linear none'
-            });
-        }
+        return index * animation_time;
+    }
 
-        setTimeout(animation, (menu_items.length * 2 + index + 1) * 1000, index);
+    function calc_backward_time(index)
+    {
+        return (menu_items.length - index) * animation_time;
+    }
+
+    function calc_forward_delay(index)
+    {
+        return (menu_items.length + 1) * (animation_time * 1000);
+    }
+
+    function calc_backward_delay(index)
+    {
+        return menu_items.length * (animation_time * 1000);
     }
 
     function animation(index)
@@ -115,17 +121,47 @@
         if ((index + 1) % 2 == 0)
         {
             jQuery(menu_items[index]).css({
-                animation: 'conduit-current-bottom-left 1s ' + index + 's linear none'
+                'animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+                '-moz-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+                '-webkit-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+                '-ms-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none'
             });
         }
         else
         {
             jQuery(menu_items[index]).css({
-                animation: 'conduit-current-bottom-right 1s ' + index + 's linear none'
+                'animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+                '-moz-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+                '-webkit-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+                '-ms-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none'
             });
         }
 
-        setTimeout(reverse_animation, (menu_items.length + (menu_items.length - index + 1)) * 1000, index);
+        setTimeout(reverse_animation, calc_backward_delay(index), index);
+    }
+
+    function reverse_animation(index)
+    {
+        if ((index + 1) % 2 == 0)
+        {
+            jQuery(menu_items[index]).css({
+                'animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+                '-moz-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+                '-webkit-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+                '-ms-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none'
+            });
+        }
+        else
+        {
+            jQuery(menu_items[index]).css({
+                'animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+                '-moz-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+                '-webkit-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+                '-ms-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none'
+            });
+        }
+
+        setTimeout(animation, calc_forward_delay(index), index);
     }
 
     for (let i = 0; i < menu_items.length; ++i)
