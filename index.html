@@ -42,8 +42,8 @@ newsfeed_max: 4
     <div class="image">
         <a href="{{ post.url | remove: '.html' | prepend: site.url_dir | replace: '//','/' }}"
           title="{{ post.title }}">
-            <img src="{{ post.thumb | prepend: 'img/' | prepend: site.url_dir }}"
-             alt="{{ post.title }}" title="{{ post.title }}">
+            <img src="{{ post.thumb | prepend: 'img/' | prepend: site.url_dir }}" data-src="{{ post.thumb | prepend: 'img/' | prepend: site.url_dir }}"
+             alt="{{ post.title }}" title="{{ post.title }}" class="lazyload">
         </a>
     </div>
     <div class="content">
