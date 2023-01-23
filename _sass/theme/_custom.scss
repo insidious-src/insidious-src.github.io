@@ -321,98 +321,129 @@
 $conduit-width: 1px;
 $conduit-pulse-color: rgb(255, 255, 255);
 
-@include keyframe(conduit-current) {
-    0% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 5%, _palette(accent1, border) 60%) 1;
-    }
+@mixin animation-conduit-current($name, $first_direction, $second_direction) {
+    @include keyframe($name) {
+        0% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 3%, _palette(accent1, border) 60%) 1;
+        }
 
-    5% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 15%, _palette(accent1, border) 60%) 1;
-    }
+        5% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 5%, _palette(accent1, border) 60%) 1;
+        }
 
-    10% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 30%, _palette(accent1, border) 60%) 1;
-    }
+        10% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 15%, _palette(accent1, border) 60%) 1;
+        }
 
-    15% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 40%, _palette(accent1, border) 60%) 1;
-    }
+        15% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 30%, _palette(accent1, border) 60%) 1;
+        }
 
-    20% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 50%, _palette(accent1, border) 60%) 1;
-    }
+        20% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 40%, _palette(accent1, border) 60%) 1;
+        }
 
-    25% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 60%, _palette(accent1, border) 60%) 1;
-    }
+        25% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 50%, _palette(accent1, border) 60%) 1;
+        }
 
-    30% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 70%, _palette(accent1, border) 60%) 1;
-    }
+        30% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 60%, _palette(accent1, border) 60%) 1;
+        }
 
-    35% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 80%, _palette(accent1, border) 60%) 1;
-    }
+        35% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 70%, _palette(accent1, border) 60%) 1;
+        }
 
-    40% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 90%, _palette(accent1, border) 60%) 1;
-    }
+        40% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 80%, _palette(accent1, border) 60%) 1;
+        }
 
-    45% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 93%, _palette(accent1, border) 60%) 1;
-    }
+        45% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 90%, _palette(accent1, border) 60%) 1;
+        }
 
-    50% {
-        border-image: linear-gradient(to bottom, _palette(accent1, border), $conduit-pulse-color 95%, _palette(accent1, border) 60%) 1;
-    }
+        50% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 97%, _palette(accent1, border) 60%) 1;
+        }
 
-    55% {
-        border-image: linear-gradient(to right, _palette(accent1, border), $conduit-pulse-color 5%, _palette(accent1, border) 60%) 1;
-    }
+        // ==================================
 
-    60% {
-        border-image: linear-gradient(to right, _palette(accent1, border), $conduit-pulse-color 15%, _palette(accent1, border) 60%) 1;
-    }
+        51% {
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 3%, _palette(accent1, border) 60%) 1;
+        }
 
-    65% {
-        border-image: linear-gradient(to right, _palette(accent1, border), $conduit-pulse-color 25%, _palette(accent1, border) 60%) 1;
-    }
+        55% {
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 5%, _palette(accent1, border) 60%) 1;
+        }
 
-    70% {
-        border-image: linear-gradient(to right, _palette(accent1, border), $conduit-pulse-color 35%, _palette(accent1, border) 60%) 1;
-    }
+        60% {
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 15%, _palette(accent1, border) 60%) 1;
+        }
 
-    75% {
-        border-image: linear-gradient(to right, _palette(accent1, border), $conduit-pulse-color 45%, _palette(accent1, border) 60%) 1;
-    }
+        65% {
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 30%, _palette(accent1, border) 60%) 1;
+        }
 
-    80% {
-        border-image: linear-gradient(to right, _palette(accent1, border), $conduit-pulse-color 55%, _palette(accent1, border) 60%) 1;
-    }
+        70% {
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 40%, _palette(accent1, border) 60%) 1;
+        }
 
-    85% {
-        border-image: linear-gradient(to right, _palette(accent1, border), $conduit-pulse-color 65%, _palette(accent1, border) 60%) 1;
-    }
+        75% {
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 50%, _palette(accent1, border) 60%) 1;
+        }
 
-    90% {
-        border-image: linear-gradient(to right, _palette(accent1, border), $conduit-pulse-color 75%, _palette(accent1, border) 60%) 1;
-    }
+        80% {
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 60%, _palette(accent1, border) 60%) 1;
+        }
 
-    95% {
-        border-image: linear-gradient(to right, _palette(accent1, border), $conduit-pulse-color 85%, _palette(accent1, border) 60%) 1;
-    }
+        85% {
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 70%, _palette(accent1, border) 60%) 1;
+        }
 
-    100% {
-        border-image: linear-gradient(to right, _palette(accent1, border), $conduit-pulse-color 95%, _palette(accent1, border) 60%) 1;
+        90% {
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 80%, _palette(accent1, border) 60%) 1;
+        }
+
+        95% {
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 90%, _palette(accent1, border) 60%) 1;
+        }
+
+        100% {
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 97%, _palette(accent1, border) 60%) 1;
+        }
     }
 }
+
+@include animation-conduit-current(conduit-current-bottom-right, bottom, right);
+@include animation-conduit-current(conduit-current-bottom-left, bottom, left);
+
+@include animation-conduit-current(conduit-current-right-top, right, top);
+@include animation-conduit-current(conduit-current-left-top, left, top);
 
 .conduit-border {
     > * {
         border-bottom: solid $conduit-width _palette(accent1, border);
         border-left: solid $conduit-width _palette(accent1, border);
         margin: 0 !important;
-        @include vendor('animation', 'conduit-current 2s -.5s linear infinite');
+        transition: all 0.5s linear;
+        //@include vendor('animation', 'conduit-current 1s 0s linear none');
+        //@include animation-conduit-current(conduit-current, bottom, right);
+
+        // @for $i from 1 through 10 {
+        //     @if $i % 2 == 0 {
+        //         &:nth-child(#{$i}) {
+        //             @include vendor('animation', 'conduit-current-reverse 1s #{$i}s linear none');
+        //             @include animation-conduit-current(conduit-current-reverse, bottom, left);
+        //         }
+        //     }
+        //     @else {
+        //         &:nth-child(#{$i}) {
+        //             @include vendor('animation', 'conduit-current 1s #{$i}s linear none');
+        //             @include animation-conduit-current(conduit-current, bottom, right);
+        //         }
+        //     }
+        // }
 
         &:nth-child(2n) {
             border-left: 0;

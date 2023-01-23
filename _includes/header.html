@@ -5,7 +5,7 @@
             <li class="special">
                 <a href="#menu" class="menuToggle"><span>Menu</span></a>
                 <div id="menu">
-                    <ul class="conduit-border">
+                    <ul id="menu_ul" class="conduit-border">
                         <li><a href="{{ site.url_dir }}" class="icon fa-home"> Home</a></li>
                         {% for page in site.pages %}
                         {% if page.type == 'information' or page.type == 'showcase' %}
@@ -23,7 +23,7 @@
                     </ul>
                     {% if page.layout == 'home_layout' %}
                     <h5>Jump To</h5>
-                    <ul class="conduit-border">
+                    <ul id="jump_menu_ul" class="conduit-border">
                         <li><a href="#two">Lastest Projects</a></li>
                         <li><a href="#three">Specialties</a></li>
                         <li><a href="#cta">Freelance Status</a></li>
