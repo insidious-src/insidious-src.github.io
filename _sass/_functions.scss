@@ -1,5 +1,3 @@
-@use "sass:math";
-
 /// Gets a duration value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
@@ -44,5 +42,5 @@
 
 // calc value
 @function _divide($first, $second) {
-    @return math.div($first, $second);
+    @return $first / $second;
 }
