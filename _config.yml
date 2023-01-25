@@ -15,6 +15,7 @@ url_dir: /
 timezone: Europe/Sofia
 encoding: utf-8
 permalink: /:categories/:title/
+future: true
 newsfeed_max: 4
 google_analytics_id: UA-86048189-3
 
