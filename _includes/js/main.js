@@ -96,77 +96,141 @@
     // animation time in seconds
     const animation_time = 1;
 
-    function calc_forward_time(index)
+    // function calc_forward_time(index)
+    // {
+    //     return index * animation_time;
+    // }
+
+    // function calc_backward_time(index)
+    // {
+    //     return (menu_items.length - index) * animation_time;
+    // }
+
+    // function calc_forward_delay(index)
+    // {
+    //     return (menu_items.length + 1) * (animation_time * 1000);
+    // }
+
+    // function calc_backward_delay(index)
+    // {
+    //     return menu_items.length * (animation_time * 1000);
+    // }
+
+    // function animation(index)
+    // {
+    //     if ((index + 1) % 2 == 0)
+    //     {
+    //         jQuery(menu_items[index]).css({
+    //             'animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+    //             '-moz-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+    //             '-webkit-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+    //             '-ms-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none'
+    //         });
+    //     }
+    //     else
+    //     {
+    //         jQuery(menu_items[index]).css({
+    //             'animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+    //             '-moz-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+    //             '-webkit-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
+    //             '-ms-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none'
+    //         });
+    //     }
+
+    //     setTimeout(reverse_animation, calc_backward_delay(index), index);
+    // }
+
+    // function reverse_animation(index)
+    // {
+    //     if ((index + 1) % 2 == 0)
+    //     {
+    //         jQuery(menu_items[index]).css({
+    //             'animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+    //             '-moz-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+    //             '-webkit-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+    //             '-ms-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none'
+    //         });
+    //     }
+    //     else
+    //     {
+    //         jQuery(menu_items[index]).css({
+    //             'animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+    //             '-moz-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+    //             '-webkit-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
+    //             '-ms-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none'
+    //         });
+    //     }
+
+    //     setTimeout(animation, calc_forward_delay(index), index);
+    // }
+
+    function animation_string(animation_name)
     {
-        return index * animation_time;
+        return animation_name + ' ' + animation_time + 's 0s linear none';
     }
 
-    function calc_backward_time(index)
+    function play_electric_animation_forward(index)
     {
-        return (menu_items.length - index) * animation_time;
-    }
-
-    function calc_forward_delay(index)
-    {
-        return (menu_items.length + 1) * (animation_time * 1000);
-    }
-
-    function calc_backward_delay(index)
-    {
-        return menu_items.length * (animation_time * 1000);
-    }
-
-    function animation(index)
-    {
-        if ((index + 1) % 2 == 0)
+        if (0 <= index && index < menu_items.length)
         {
-            jQuery(menu_items[index]).css({
-                'animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-                '-moz-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-                '-webkit-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-                '-ms-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none'
-            });
+            if ((index + 1) % 2 == 0)
+            {
+                jQuery(menu_items[index]).css({
+                    'animation': animation_string('conduit-current-bottom-left'),
+                    '-moz-animation': animation_string('conduit-current-bottom-left'),
+                    '-webkit-animation': animation_string('conduit-current-bottom-left'),
+                    '-ms-animation': animation_string('conduit-current-bottom-left')
+                });
+            }
+            else
+            {
+                jQuery(menu_items[index]).css({
+                    'animation': animation_string('conduit-current-bottom-right'),
+                    '-moz-animation': animation_string('conduit-current-bottom-right'),
+                    '-webkit-animation': animation_string('conduit-current-bottom-right'),
+                    '-ms-animation': animation_string('conduit-current-bottom-right')
+                });
+            }
+
+            setTimeout(play_electric_animation_forward, animation_time * 1000, ++index);
         }
         else
         {
-            jQuery(menu_items[index]).css({
-                'animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-                '-moz-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-                '-webkit-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-                '-ms-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none'
-            });
+            setTimeout(play_electric_animation_backward, animation_time * 1000, --index);
         }
-
-        setTimeout(reverse_animation, calc_backward_delay(index), index);
     }
 
-    function reverse_animation(index)
+    function play_electric_animation_backward(index)
     {
-        if ((index + 1) % 2 == 0)
+        if (0 <= index)
         {
-            jQuery(menu_items[index]).css({
-                'animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-                '-moz-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-                '-webkit-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-                '-ms-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none'
-            });
+            if ((index + 1) % 2 == 0)
+            {
+                jQuery(menu_items[index]).css({
+                    'animation': animation_string('conduit-current-right-top'),
+                    '-moz-animation': animation_string('conduit-current-right-top'),
+                    '-webkit-animation': animation_string('conduit-current-right-top'),
+                    '-ms-animation': animation_string('conduit-current-right-top')
+                });
+            }
+            else
+            {
+                jQuery(menu_items[index]).css({
+                    'animation': animation_string('conduit-current-left-top'),
+                    '-moz-animation': animation_string('conduit-current-left-top'),
+                    '-webkit-animation': animation_string('conduit-current-left-top'),
+                    '-ms-animation': animation_string('conduit-current-left-top')
+                });
+            }
+
+            setTimeout(play_electric_animation_backward, animation_time * 1000, --index);
         }
         else
         {
-            jQuery(menu_items[index]).css({
-                'animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-                '-moz-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-                '-webkit-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-                '-ms-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none'
-            });
+            play_electric_animation_forward(++index);
         }
-
-        setTimeout(animation, calc_forward_delay(index), index);
     }
 
-    for (let i = 0; i < menu_items.length; ++i)
-    {
-        animation(i);
-    }
+    if (menu_items.length > 0) play_electric_animation_forward(0);
 
 })(jQuery);
