@@ -6,20 +6,20 @@ tagline: Classic Jewel
 tags: Programming C++ Pascal Art 3D Modification
 thumb: mk4tr_thumb.jpg
 category: Project
-status: abandoned
+status: wip
 ---
 <div class="box alt">
     <div class="row uniform 50%">
-        <div class="4u">
+        <div class="4u 6u(small) 10u(vsmall) 12u(xsmall)">
             <a href="https://www.youtube.com/watch?v=TkWv3ZzwOlI">
-                <img src="https://img.youtube.com/vi/TkWv3ZzwOlI/0.jpg" alt="{{ page.title }} Trailer" class="image fit" />
+                <img src="https://img.youtube.com/vi/TkWv3ZzwOlI/0.jpg" alt="{{ page.title }} Trailer">
             </a>
         </div>
-        <div class="4u">
-            <img src="{{ site.url_dir }}img/scrngrabbz8.png" alt="{{ page.title }} Trailer" class="image fit" />
+        <div class="4u 6u(small) 10u(vsmall) 12u(xsmall)">
+            <img src="{{ site.url_dir }}img/scrngrabbz8.png" alt="{{ page.title }} Trailer">
         </div>
-        <div class="4u">
-            <img src="{{ site.url_dir }}img/face1wa7.jpg" alt="{{ page.title }} Trailer" class="image fit" />
+        <div class="4u 6u(small) 10u(vsmall) 12u(xsmall)">
+            <img src="{{ site.url_dir }}img/face1wa7.jpg" alt="{{ page.title }} Trailer">
         </div>
     </div>
 </div>

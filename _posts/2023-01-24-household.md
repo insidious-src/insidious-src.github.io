@@ -11,8 +11,8 @@ client_url: https://solventer.eu/
 role: Code
 status: wip
 ---
-<div class="12u">
+<div class="6u">
     <span class="image fit">
-        <p><img src="{{ site.url_dir }}img/home_ic_pwm_thumb.jpg" alt=""></p>
+        <p><img src="{{ site.url_dir }}img/home_ic_pwm_thumb.jpg" data-src="{{ site.url_dir }}img/home_ic_pwm_thumb.jpg" alt="Household IC PWM board" class="lazyload"></p>
     </span>
 </div>
