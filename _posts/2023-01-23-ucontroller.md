@@ -11,4 +11,8 @@ client_url: https://solventer.eu/
 role: Code
 status: wip
 ---
-
+<div class="12u">
+    <span class="image fit">
+        <p><img src="{{ site.url_dir }}img/uc_thumb.jpg" alt=""></p>
+    </span>
+</div>
