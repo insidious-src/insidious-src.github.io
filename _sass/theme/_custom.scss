@@ -421,6 +421,8 @@ $conduit-pulse-color: rgb(255, 255, 255);
 @include animation-conduit-current(conduit-current-right-top, right, top);
 @include animation-conduit-current(conduit-current-left-top, left, top);
 
+@include animation-text-pulse(active_li_pulsing_text, #ff3);
+
 .conduit-border {
     > * {
         border-bottom: solid $conduit-width _palette(accent1, border);
@@ -436,6 +438,14 @@ $conduit-pulse-color: rgb(255, 255, 255);
         &:last-child {
             border-bottom: 0;
         }
+
+        > a:hover {
+            @include vendor('animation', 'active_li_pulsing_text 1.5s 0s linear infinite');
+        }
+
+        //.active {
+        //    @include vendor('animation', 'active_li_pulsing_text 1.5s 0s linear infinite');
+        //}
     }
 }
 
