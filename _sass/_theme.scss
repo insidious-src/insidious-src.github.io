@@ -710,6 +710,7 @@ button,
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-width: 200px;
 
     &:hover {
         background-color: _palette(border-bg);
