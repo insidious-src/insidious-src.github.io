@@ -93,89 +93,22 @@
 
     // get menu items array
     let menu_items = $('#menu_ul li');
+    let jump_menu_items = $('#jump_menu_ul li');
     // animation time in seconds
-    const animation_time = 1;
-
-    // function calc_forward_time(index)
-    // {
-    //     return index * animation_time;
-    // }
-
-    // function calc_backward_time(index)
-    // {
-    //     return (menu_items.length - index) * animation_time;
-    // }
-
-    // function calc_forward_delay(index)
-    // {
-    //     return (menu_items.length + 1) * (animation_time * 1000);
-    // }
-
-    // function calc_backward_delay(index)
-    // {
-    //     return menu_items.length * (animation_time * 1000);
-    // }
-
-    // function animation(index)
-    // {
-    //     if ((index + 1) % 2 == 0)
-    //     {
-    //         jQuery(menu_items[index]).css({
-    //             'animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-    //             '-moz-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-    //             '-webkit-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-    //             '-ms-animation': 'conduit-current-bottom-left ' + animation_time + 's ' + calc_forward_time(index) + 's linear none'
-    //         });
-    //     }
-    //     else
-    //     {
-    //         jQuery(menu_items[index]).css({
-    //             'animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-    //             '-moz-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-    //             '-webkit-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none',
-    //             '-ms-animation': 'conduit-current-bottom-right ' + animation_time + 's ' + calc_forward_time(index) + 's linear none'
-    //         });
-    //     }
-
-    //     setTimeout(reverse_animation, calc_backward_delay(index), index);
-    // }
-
-    // function reverse_animation(index)
-    // {
-    //     if ((index + 1) % 2 == 0)
-    //     {
-    //         jQuery(menu_items[index]).css({
-    //             'animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-    //             '-moz-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-    //             '-webkit-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-    //             '-ms-animation': 'conduit-current-right-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none'
-    //         });
-    //     }
-    //     else
-    //     {
-    //         jQuery(menu_items[index]).css({
-    //             'animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-    //             '-moz-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-    //             '-webkit-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none',
-    //             '-ms-animation': 'conduit-current-left-top ' + animation_time + 's ' + calc_backward_time(index) + 's linear none'
-    //         });
-    //     }
-
-    //     setTimeout(animation, calc_forward_delay(index), index);
-    // }
+    const animation_time = 1.5;
 
     function animation_string(animation_name)
     {
         return animation_name + ' ' + animation_time + 's 0s linear none';
     }
 
-    function play_electric_animation_forward(index)
+    function play_electric_animation_forward(items, index)
     {
-        if (0 <= index && index < menu_items.length)
+        if (0 <= index && index < items.length)
         {
             if ((index + 1) % 2 == 0)
             {
-                jQuery(menu_items[index]).css({
+                jQuery(items[index]).css({
                     'animation': animation_string('conduit-current-bottom-left'),
                     '-moz-animation': animation_string('conduit-current-bottom-left'),
                     '-webkit-animation': animation_string('conduit-current-bottom-left'),
@@ -184,7 +117,7 @@
             }
             else
             {
-                jQuery(menu_items[index]).css({
+                jQuery(items[index]).css({
                     'animation': animation_string('conduit-current-bottom-right'),
                     '-moz-animation': animation_string('conduit-current-bottom-right'),
                     '-webkit-animation': animation_string('conduit-current-bottom-right'),
@@ -192,21 +125,21 @@
                 });
             }
 
-            setTimeout(play_electric_animation_forward, animation_time * 1000, ++index);
+            setTimeout(play_electric_animation_forward, animation_time * 1000, items, ++index);
         }
         else
         {
-            setTimeout(play_electric_animation_backward, animation_time * 1000, --index);
+            setTimeout(play_electric_animation_backward, animation_time * 1000, items, --index);
         }
     }
 
-    function play_electric_animation_backward(index)
+    function play_electric_animation_backward(items, index)
     {
         if (0 <= index)
         {
             if ((index + 1) % 2 == 0)
             {
-                jQuery(menu_items[index]).css({
+                jQuery(items[index]).css({
                     'animation': animation_string('conduit-current-right-top'),
                     '-moz-animation': animation_string('conduit-current-right-top'),
                     '-webkit-animation': animation_string('conduit-current-right-top'),
@@ -215,7 +148,7 @@
             }
             else
             {
-                jQuery(menu_items[index]).css({
+                jQuery(items[index]).css({
                     'animation': animation_string('conduit-current-left-top'),
                     '-moz-animation': animation_string('conduit-current-left-top'),
                     '-webkit-animation': animation_string('conduit-current-left-top'),
@@ -223,14 +156,15 @@
                 });
             }
 
-            setTimeout(play_electric_animation_backward, animation_time * 1000, --index);
+            setTimeout(play_electric_animation_backward, animation_time * 1000, items, --index);
         }
         else
         {
-            play_electric_animation_forward(++index);
+            play_electric_animation_forward(items, ++index);
         }
     }
 
-    if (menu_items.length > 0) play_electric_animation_forward(0);
+    if (menu_items.length > 0) play_electric_animation_forward(menu_items, 0);
+    if (jump_menu_items.length > 0) play_electric_animation_forward(jump_menu_items, 0);
 
 })(jQuery);
