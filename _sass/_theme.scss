@@ -500,8 +500,13 @@ ul {
 
         li {
             display: inline-block;
-            padding: 0 (_size(element-margin) * 0.75) 0 0;
+            //padding: 0 (_size(element-margin) * 0.75) 0 0;
+            padding: 0 (_size(element-margin) * 0.4) 0 (_size(element-margin) * 0.4);
             vertical-align: middle;
+
+            &:first-child {
+                padding-left: 0;
+            }
 
             &:last-child {
                 padding-right: 0;
