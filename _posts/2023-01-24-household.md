@@ -8,11 +8,11 @@ thumb: home_ic_pwm_thumb.jpg
 category: Project
 client: Solventer Ltd.
 client_url: https://solventer.eu/
-role: Code
+role: Electronics
 status: wip
 ---
 <div class="6u">
     <span class="image fit">
-        <p><img src="{{ site.url_dir }}img/home_ic_pwm_thumb.jpg" data-src="{{ site.url_dir }}img/home_ic_pwm_thumb.jpg" alt="Household IC PWM board" class="lazyload"></p>
+        <p><img src="{{ site.url_dir }}img/home_ic_pwm_screenshot_1.jpg" data-src="{{ site.url_dir }}img/home_ic_pwm_screenshot_1.jpg" alt="Household IC PWM board" class="lazyload"></p>
     </span>
 </div>
