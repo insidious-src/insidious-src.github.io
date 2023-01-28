@@ -17,7 +17,7 @@ status: wip
             <div class="6u 6u(small) 10u(vsmall) 12u(xsmall)">
                 <a href="#" class="image fit shadow">
                     <h4 class="overlay"><span>3 Phase Protection 3D View</span></h4>
-                    <img src="{{ site.url_dir }}img/3-phase-protection_thumb.jpg" data-src="{{ site.url_dir }}img/3-phase-protection.jpg" alt="3 Phase Protection 3D View" class="lazyload">
+                    <img src="{{ site.url_dir }}img/3-phase-protection_thumb.jpg" data-src="{{ site.url_dir }}img/3-phase-protection_thumb.jpg" alt="3 Phase Protection 3D View" class="lazyload">
                 </a>
             </div>
             <div class="6u 6u(small) 10u(vsmall) 12u(xsmall)">
