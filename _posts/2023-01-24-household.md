@@ -11,8 +11,39 @@ client_url: https://solventer.eu/
 role: Electronics
 status: wip
 ---
-<div class="6u">
-    <span class="image fit">
-        <p><img src="{{ site.url_dir }}img/home_ic_pwm_screenshot_1.jpg" data-src="{{ site.url_dir }}img/home_ic_pwm_screenshot_1.jpg" alt="Household IC PWM board" class="lazyload"></p>
-    </span>
-</div>
+<section>
+    <h5>Household IC PWM Board</h5>
+    <div class="box alt">
+        <div class="row uniform 50%">
+            <div class="6u 6u(small) 10u(vsmall) 12u(xsmall)">
+                <a href="#" class="image fit shadow">
+                    <h4 class="overlay"><span>PWM Board 3D View</span></h4>
+                    <img src="{{ site.url_dir }}img/home_ic_pwm_thumb.jpg" data-src="{{ site.url_dir }}img/home_ic_pwm_thumb.jpg" alt="Household IC PWM Board" class="lazyload">
+                </a>
+            </div>
+            <div class="6u 6u(small) 10u(vsmall) 12u(xsmall)">
+                <a href="#" class="image fit shadow">
+                    <h4 class="overlay"><span>PWM Board Screenshot</span></h4>
+                    <img src="{{ site.url_dir }}img/home_ic_pwm_screenshot_1.jpg" data-src="{{ site.url_dir }}img/home_ic_pwm_screenshot_1.jpg" alt="Household IC PWM Board" class="lazyload">
+                </a>
+            </div>
+        </div>
+    </div>
+    <h5>Household IC Relays Board</h5>
+    <div class="box alt">
+        <div class="row uniform 50%">
+            <div class="6u 6u(small) 10u(vsmall) 12u(xsmall)">
+                <a href="#" class="image fit shadow">
+                    <h4 class="overlay"><span>Relays Board 3D View</span></h4>
+                    <img src="{{ site.url_dir }}img/home_ic_relays_screenshot_1.jpg" data-src="{{ site.url_dir }}img/home_ic_relays_screenshot_1.jpg" alt="Household IC Relays Board" class="lazyload">
+                </a>
+            </div>
+            <div class="6u 6u(small) 10u(vsmall) 12u(xsmall)">
+                <a href="#" class="image fit shadow">
+                    <h4 class="overlay"><span>Relays Board Screenshot</span></h4>
+                    <img src="{{ site.url_dir }}img/home_ic_relays_screenshot_2.jpg" data-src="{{ site.url_dir }}img/home_ic_relays_screenshot_2.jpg" alt="Household IC Relays Board" class="lazyload">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
