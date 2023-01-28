@@ -369,7 +369,7 @@ var Keyframes = function () {
 
       _this[listenerName] = eventCallback;
 
-      _this.mountedElement.addEventListener(type, _this[listenerName]);
+      _this.mountedElement.addEventListener(type, _this[listenerName], { passive: true });
     };
 
     if (onBeforeStart) {
