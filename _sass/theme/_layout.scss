@@ -23,7 +23,7 @@ body
 
 body
 {
-    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$imgurl}/banner.jpg")'));
+    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$imgurl}/banner.webp")'));
     background-attachment: fixed;
     background-color: _palette(bg);
     background-position: center center;

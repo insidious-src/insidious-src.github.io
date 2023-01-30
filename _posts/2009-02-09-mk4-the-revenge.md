@@ -4,7 +4,7 @@ title: Mortal Kombat 4 The Revenge
 description: MK4TR uses enchanced engine + elements from the original. MK Armageddon mixin.
 tagline: Classic Jewel
 tags: Programming C++ Pascal Art 3D Modification
-thumb: mk4tr_thumb.jpg
+thumb: mk4tr_thumb.webp
 category: Project
 status: wip
 ---
@@ -12,14 +12,14 @@ status: wip
     <div class="row uniform 50%">
         <div class="4u 6u(small) 10u(vsmall) 12u(xsmall)">
             <a href="https://www.youtube.com/watch?v=TkWv3ZzwOlI">
-                <img src="https://img.youtube.com/vi/TkWv3ZzwOlI/0.jpg" alt="{{ page.title }} Trailer">
+                <img src="https://img.youtube.com/vi/TkWv3ZzwOlI/0.webp" alt="{{ page.title }} Trailer">
             </a>
         </div>
         <div class="4u 6u(small) 10u(vsmall) 12u(xsmall)">
-            <img src="{{ site.url_dir }}img/scrngrabbz8.png" alt="{{ page.title }} Trailer">
+            <img src="{{ site.url_dir }}img/scrngrabbz8.webp" alt="{{ page.title }} Trailer">
         </div>
         <div class="4u 6u(small) 10u(vsmall) 12u(xsmall)">
-            <img src="{{ site.url_dir }}img/face1wa7.jpg" alt="{{ page.title }} Trailer">
+            <img src="{{ site.url_dir }}img/face1wa7.webp" alt="{{ page.title }} Trailer">
         </div>
     </div>
 </div>

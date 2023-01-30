@@ -4,7 +4,7 @@ title: Solventer 3 Phase Protection
 description: 3 Phase Protection
 tagline: Solventer
 tags: Science Electronics KiCAD
-thumb: 3-phase-protection_thumb.jpg
+thumb: 3-phase-protection_thumb.webp
 category: Project
 client: Solventer Ltd.
 client_url: https://solventer.eu/
@@ -17,13 +17,13 @@ status: wip
             <div class="6u 6u(small) 10u(vsmall) 12u(xsmall)">
                 <a href="#" class="image fit shadow">
                     <h4 class="overlay"><span>3 Phase Protection 3D View</span></h4>
-                    <img src="{{ site.url_dir }}img/3-phase-protection_thumb.jpg" data-src="{{ site.url_dir }}img/3-phase-protection_thumb.jpg" alt="3 Phase Protection 3D View" class="lazyload">
+                    <img src="{{ site.url_dir }}img/3-phase-protection_thumb.webp" data-src="{{ site.url_dir }}img/3-phase-protection_thumb.webp" alt="3 Phase Protection 3D View" class="lazyload">
                 </a>
             </div>
             <div class="6u 6u(small) 10u(vsmall) 12u(xsmall)">
                 <a href="#" class="image fit shadow">
                     <h4 class="overlay"><span>3 Phase Protection Screenshot</span></h4>
-                    <img src="{{ site.url_dir }}img/3-phase-protection_screenshot_1.jpg" data-src="{{ site.url_dir }}img/3-phase-protection_screenshot_1.jpg" alt="3 Phase Protection Screenshot" class="lazyload">
+                    <img src="{{ site.url_dir }}img/3-phase-protection_screenshot_1.webp" data-src="{{ site.url_dir }}img/3-phase-protection_screenshot_1.webp" alt="3 Phase Protection Screenshot" class="lazyload">
                 </a>
             </div>
         </div>

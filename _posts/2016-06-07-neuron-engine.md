@@ -4,7 +4,7 @@ title: Neuron Simulation Engine
 description: Advanced simulation engine based on C++ Unified Abstraction Library
 tagline: Brain Abuse
 tags: Programming C++ CMake Vulkan OpenCL
-thumb: neuron_thumb.jpg
+thumb: neuron_thumb.webp
 category: Project
 status: wip
 ---

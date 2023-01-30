@@ -4,12 +4,12 @@ title: Zombie Plague 5 Silent Hill
 description: Silent Hill is set in the series' eponymous fictitious American town
 tagline: Psychological Horror
 tags: Programming Art 3D Game AmxxPawn Counter-Strike
-thumb: zp5_silent_hill_thumb.jpg
+thumb: zp5_silent_hill_thumb.webp
 category: Project
 role: Idea, Code
 status: wip
 ---
-![Logo](https://1.bp.blogspot.com/-o0hEXzvB9WY/UI50JnAgtSI/AAAAAAAAALk/C-p1VVofD0c/s1600/dphclub.com_1203530122silent_hill_by_evilken26.jpg)
+![Logo](https://1.bp.blogspot.com/-o0hEXzvB9WY/UI50JnAgtSI/AAAAAAAAALk/C-p1VVofD0c/s1600/dphclub.com_1203530122silent_hill_by_evilken26.webp)
 # Zombie Plague 5: Silent Hill #
 
 ### Environment ###
