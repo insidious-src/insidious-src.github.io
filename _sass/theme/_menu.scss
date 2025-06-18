@@ -23,7 +23,7 @@ $transparent : rgba(0, 0, 0, 0);
 #menu {
     @include vendor('transform', 'translateX(20em)');
     @include vendor('transition', 'transform #{_duration(menu)} ease');
-    @include vendor('overflow-scrolling', 'touch');
+    //@include vendor('overflow-scrolling', 'touch');
     background: _palette(accent1, bg);
     color: _palette(accent1, fg-bold);
     height: 100%;
