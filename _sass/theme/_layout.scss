@@ -12,7 +12,8 @@
 
 @include viewport
 {
-    width: device-width;
+    width: auto;
+    //width: device-width;
 }
 
 html,
