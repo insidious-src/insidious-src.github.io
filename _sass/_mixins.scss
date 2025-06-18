@@ -10,7 +10,7 @@
             content: $content;
         }
 
-        @include vendor('font-smoothing', 'antialiased');
+        //@include vendor('font-smoothing', 'antialiased');
         //-moz-osx-font-smoothing: grayscale;
         font-family: 'FontAwesome';
         font-style: normal;
@@ -29,7 +29,7 @@
             content: $content;
         }
 
-        @include vendor('font-smoothing', 'antialiased');
+        //@include vendor('font-smoothing', 'antialiased');
         //-moz-osx-font-smoothing: grayscale;
         font-family: 'FontAwesome';
         font-style: normal;

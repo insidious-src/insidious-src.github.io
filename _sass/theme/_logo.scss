@@ -34,7 +34,7 @@ $logo-fg: rgb(220, 220, 226);
 }
 
 .logo {
-    @include vendor('font-smoothing', 'antialiased');
+    //@include vendor('font-smoothing', 'antialiased');
     border: 0;
     color: $logo-fg;
     font-family: _font(family);
