@@ -231,6 +231,10 @@
     @include vendor('align-items', 'center');
     @include vendor('display', 'flex');
 
+    > h2 {
+        display: none;
+    }
+
     .image {
         @include vendor('order', '1');
         border-radius: 0;
@@ -314,6 +318,10 @@
             padding: 1.1em 1em 1.8em;
         }
     }
+}
+
+#two > h2 {
+    display: none;
 }
 
 // Electricity
