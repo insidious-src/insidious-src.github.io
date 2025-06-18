@@ -3,7 +3,7 @@ $imgurl: '{{ site.url_dir }}img';
 @import 'reset'       ;
 @import 'vars'        ;
 @import 'functions'   ;
-@import 'mixins'      ;
+//@import 'mixins'      ;
 @import 'theme/layout';
 @import 'theme/banner';
 @import 'theme/header';
