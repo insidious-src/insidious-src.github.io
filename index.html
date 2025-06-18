@@ -43,6 +43,7 @@ newsfeed_max: 4
         <a href="{{ post.url | remove: '.html' | prepend: site.url_dir | replace: '//','/' }}"
           title="{{ post.title }}">
             <img data-sizes="auto"
+            src="{{ post.thumb | prepend: 'img/' | prepend: site.url_dir }}"
             data-src="{{ post.thumb | prepend: 'img/' | prepend: site.url_dir }}"
             data-srcset="{{ post.thumb | prepend: 'img/' | prepend: site.url_dir }} 300w,
             {{ post.thumb | prepend: 'img/' | prepend: site.url_dir }} 600w,
