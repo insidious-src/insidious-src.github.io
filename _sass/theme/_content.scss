@@ -36,8 +36,8 @@
         &.major {
 
             h2 {
-                //border-color: #ddd;
-                border-color: _palette($p, fg-light);
+                @include vendor('border-image', 'linear-gradient(to right, transparent, rgb(128, 140, 176), transparent) 1');
+                border-bottom: 1px solid;
             }
 
             h3, h4, h5, h6 {
