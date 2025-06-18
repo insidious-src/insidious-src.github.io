@@ -31,7 +31,7 @@ $empty : '';
             //background: _palette(fg-bold);
             //@include vendor('border-image', 'linear-gradient(to right, transparent, rgb(128, 140, 176), transparent) 1');
             @include vendor('border-image', 'linear-gradient(to right, transparent, rgb(255, 255, 255), transparent) 1');
-            border-bottom: 2px solid;
+            border-bottom: 3px solid;
             content: $empty;
             display: block;
             height: 1px;
