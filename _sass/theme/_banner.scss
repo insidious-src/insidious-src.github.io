@@ -28,13 +28,13 @@ $empty : '';
         &::after {
             @include vendor('transition', 'width .85s ease');
             @include vendor('transition-delay', '.25s');
-            background: _palette(fg-bold);
+            //background: _palette(fg-bold);
             //@include vendor('border-image', 'linear-gradient(to right, transparent, rgb(128, 140, 176), transparent) 1');
-            //@include vendor('border-image', 'linear-gradient(to right, transparent, rgb(255, 255, 255), transparent) 1');
-            //border-bottom: 2px solid;
-            content: '';
+            @include vendor('border-image', 'linear-gradient(to right, transparent, rgb(255, 255, 255), transparent) 1');
+            border-bottom: 2px solid;
+            content: $empty;
             display: block;
-            height: 2px;
+            height: 1px;
             position: absolute;
             width: 100%;
         }
