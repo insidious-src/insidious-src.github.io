@@ -36,7 +36,8 @@
         &.major {
 
             h2 {
-                border-color: _palette($p, fg-bold);
+                //border-color: #ddd;
+                border-color: _palette($p, fg-light);
             }
 
             h3, h4, h5, h6 {
