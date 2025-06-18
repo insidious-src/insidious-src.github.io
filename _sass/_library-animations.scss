@@ -6,7 +6,7 @@
 @mixin animation-text-pulse($name, $color: #fff) {
     @include keyframe($name) {
         0% {
-            @include vendor('text-shadow', '0');
+            @include vendor('text-shadow', '0px');
         }
 
         50% {
@@ -14,7 +14,7 @@
         }
 
         100% {
-            @include vendor('text-shadow', '0');
+            @include vendor('text-shadow', '0px');
         }
     }
 }
