@@ -228,8 +228,8 @@
 // Spotlight
 
 .spotlight {
-    @include vendor('align-items', 'center');
-    @include vendor('display', 'flex');
+    display: flex;
+    align-items: center;
 
     > h2 {
         display: none;

@@ -3,6 +3,7 @@
 @mixin wrapper($p) {
     background-color: _palette($p, bg);
     color: _palette($p, fg);
+    padding: 3.3em 0 0.6em 0;
 
     // Basic
 
@@ -34,9 +35,10 @@
         }
 
         &.major {
+            padding: 0;
 
             h2 {
-                @include vendor('border-image', 'linear-gradient(to right, transparent, rgb(128, 140, 176), transparent) 1');
+                @include vendor('border-image', 'linear-gradient(to right, transparent, rgb(125, 125, 130), transparent) 1');
                 border-bottom: 1px solid;
             }
 
@@ -249,7 +251,7 @@
 }
 
 .wrapper {
-    @include padding(4em, 0);
+    @include padding(3.5em, 0);
     overflow-x: hidden;
 
     > .inner {
