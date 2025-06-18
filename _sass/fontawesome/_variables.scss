@@ -9,7 +9,8 @@ $fa-css-prefix:       fa !default;
 $fa-version:          "4.7.0" !default;
 $fa-border-color:     #eee !default;
 $fa-inverse:          #fff !default;
-$fa-li-width:         calc(30 / 14) + em !default;
+$fa-li-width:         2.142857142857143 + em !default;
+//$fa-li-width:         -calc(30 / 14) + em !default;
 
 $fa-var-500px: "\f26e";
 $fa-var-address-book: "\f2b9";
@@ -797,4 +798,3 @@ $fa-var-yoast: "\f2b1";
 $fa-var-youtube: "\f167";
 $fa-var-youtube-play: "\f16a";
 $fa-var-youtube-square: "\f166";
-

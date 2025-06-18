@@ -11,7 +11,7 @@
 
         &:hover {
             @include vendor('animation', 'txt-pulse 1s 0s linear infinite');
-            ///@include vendor('text-shadow', '0 0 5px #{_palette(fg-bold)}');
+            //@include vendor('text-shadow', '0 0 5px #{_palette(fg-bold)}');
             @include vendor('transition', '#{_duration(transitions)} ease-in');
         }
 
