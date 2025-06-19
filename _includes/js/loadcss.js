@@ -12,4 +12,4 @@ var raf = requestAnimationFrame       || mozRequestAnimationFrame ||
           webkitRequestAnimationFrame || msRequestAnimationFrame;
 
 if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-else window.addEventListener('load', loadDeferredStyles);
+else window.addEventListener('load', loadDeferredStyles, {passive: true});
