@@ -463,6 +463,8 @@ $conduit-pulse-color: rgb(255, 255, 255);
 // CTA
 
 #cta {
+    padding-top: 3em;
+
     .inner {
         @include vendor('display', 'flex');
         max-width: 45em;

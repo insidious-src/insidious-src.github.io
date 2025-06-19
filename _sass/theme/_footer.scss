@@ -1,12 +1,10 @@
 /* Footer */
 
 .go_to_top {
-    //display: flex;
-    //@include vendor('flex-direction', 'column');
-    //@include vendor('justify-content', 'center');
+    margin-top  : 50px;
     margin-left : auto;
     margin-right: auto;
-    content: '';
+    //content: '';
     height: 0;
     width: 0;
     border-bottom: 90px solid darken(_palette(footer-bg), 8);
@@ -18,7 +16,7 @@
     a {
         text-align: center;
         top: 0.8em;
-        left: -0.52em;
+        left: -0.51em;
         font-size: 50px;
     }
 }
