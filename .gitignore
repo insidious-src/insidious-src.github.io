@@ -59,3 +59,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+.cflags
+.config
+.creator
+.creator.user
+.cxxflags
+.files
+.includes
