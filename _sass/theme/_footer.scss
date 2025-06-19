@@ -26,8 +26,11 @@
     text-align      : center;
 
     .icons {
-        font-size  : 1.6em;
-        line-height: 2em  ;
+        font-size: 1.6em;
+
+        li {
+            padding: 0.6em 0.5em 0.8em 0.5em;
+        }
 
         a {
             color: _palette(fg-light);
