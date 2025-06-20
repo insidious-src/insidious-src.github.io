@@ -68,4 +68,13 @@ $logo-fg: rgb(220, 220, 226);
         border-bottom: solid $b + px rgba(0, 150, 200, $opacity);
         border-top: solid $b + px rgba(0, 250, 150, $opacity);
     }
+
+    > i {
+        //font-size: 1.5em;
+        //height: $diameter + px;
+        //line-height: $diameter + px;
+        //margin: 0 auto;
+        //text-align: center;
+        //width: $diameter + px;
+    }
 }
