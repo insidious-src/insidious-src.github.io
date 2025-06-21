@@ -64,8 +64,7 @@ status: wip
 - Humans:   Shield
 - Humans:   Instantly switch to the Real World for a short period of time
 - Monsters: Madness
-- Monsters: Anti-Infection Injection
-- Monsters: Complete darkness for a short period of time
+- Monsters: Complete darkness for a short period of time (only works if in Otherworld)
 - Monsters: Stay in Otherworld for the rest of the round
 
 ### Maps
@@ -79,11 +78,11 @@ status: wip
 
 ### Requirements
 - Half-Life Dedicated Server (SteamCMD)
-- Metamod(P) 1.20+
+- Metamod(P) 1.21+
 - AMX Mod X 1.8.2+
 - Zombie Plague 5+
 
 ### Credits
-- map: zm_ahouse       - [fighte3](http://cs.gamebanana.com/maps/156238) & Ð¡ÐµÑ€}||{
+- map: zm_ahouse       - [fighte3](http://cs.gamebanana.com/maps/156238) & Ð¡ÐµÑ€}I{
 - map: zm_silent_hill  - [BoLxB](http://cs.gamebanana.com/maps/140085), Cep}I{, 17thDay, Anikes, axel_kat, Hiubert & Psycho-A
 - map: aim_silentnight - Cha Siu Fan ( Glock18 )
