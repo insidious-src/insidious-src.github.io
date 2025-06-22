@@ -37,14 +37,6 @@ body
 
 body
 {
-    //@include vendor('background-image', ('linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$imgurl}/banner.webp")'));
-    //background-attachment: fixed;
-    //background-color: _palette(bg);
-    //background-position: center center;
-    //background-repeat: no-repeat;
-    //background-size: cover;
-    //@include vendor('animation', 'backgroundPulse 5s ease-in-out infinite alternate');
-
     &.is-loading
     {
         *
@@ -64,13 +56,19 @@ body
     }
 }
 
-.background
+.background-image
 {
+    @include vendor('background-image', ('linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$imgurl}/banner.webp")'));
+    background-attachment: fixed;
+    background-color: _palette(bg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
-    z-index: -9999;
-    @include vendor('animation', 'background_pulse 5s ease-in-out infinite alternate');
+    height: 100%;
+    z-index: -99999;
+    @include vendor('animation', 'background_pulse 4s ease-in-out infinite alternate');
 }
