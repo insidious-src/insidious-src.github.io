@@ -68,7 +68,7 @@ body
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     z-index: -99999;
     @include vendor('animation', 'background_pulse 4s ease-in-out infinite alternate');
 }
