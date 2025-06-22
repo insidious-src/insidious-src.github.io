@@ -43,7 +43,7 @@ body
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    @include vendor('animation', 'backgroundPulse 5s ease-in-out infinite alternate');
+    //@include vendor('animation', 'backgroundPulse 5s ease-in-out infinite alternate');
 
     &.is-loading
     {
