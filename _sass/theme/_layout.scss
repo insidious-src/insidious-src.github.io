@@ -1,5 +1,5 @@
-@import 'skel'  ;
-@import 'mixins';
+@import '../skel'  ;
+@import '../mixins';
 
 @include skel-breakpoints((
         xlarge: '(max-width: 1680px)',
@@ -16,7 +16,7 @@
     //width: device-width;
 }
 
-@include keyframe(backgroundPulse)
+@include keyframe(background_pulse)
 {
     0%, 100%
     {
@@ -37,12 +37,12 @@ body
 
 body
 {
-    @include vendor('background-image', ('linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$imgurl}/banner.webp")'));
-    background-attachment: fixed;
-    background-color: _palette(bg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    //@include vendor('background-image', ('linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$imgurl}/banner.webp")'));
+    //background-attachment: fixed;
+    //background-color: _palette(bg);
+    //background-position: center center;
+    //background-repeat: no-repeat;
+    //background-size: cover;
     //@include vendor('animation', 'backgroundPulse 5s ease-in-out infinite alternate');
 
     &.is-loading
@@ -62,4 +62,15 @@ body
     {
         padding-top: 0;
     }
+}
+
+.background
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -9999;
+    @include vendor('animation', 'background_pulse 5s ease-in-out infinite alternate');
 }

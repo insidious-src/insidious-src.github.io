@@ -11,8 +11,8 @@ donate_url: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id
 
 enforce_ssl: insidious-src.github.io
 url: https://insidious-src.github.io
-#enforce_ssl: k-petrov.online
-#url: https://k-petrov.online
+#enforce_ssl: insidious-src.online
+#url: https://insidious-src.online
 url_dir: /
 timezone: Europe/Sofia
 encoding: utf-8
