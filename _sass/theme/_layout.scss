@@ -16,6 +16,19 @@
     //width: device-width;
 }
 
+@include keyframe(backgroundPulse)
+{
+    0%, 100%
+    {
+        @include vendor('transform', 'scale(1)');
+    }
+
+    50%
+    {
+        @include vendor('transform', 'scale(1.05)');
+    }
+}
+
 html,
 body
 {
@@ -30,6 +43,7 @@ body
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    @include vendor('animation', 'backgroundPulse 5s ease-in-out infinite alternate');
 
     &.is-loading
     {
