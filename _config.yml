@@ -77,3 +77,6 @@ sass:
 
 compress_html:
     clippings: all
+
+relative_links:
+  collections: true
