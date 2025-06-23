@@ -20,7 +20,7 @@
 {
     0%, 100%
     {
-        @include vendor('transform', 'scale(1)');
+        @include vendor('transform', 'scale(1.001)');
     }
 
     50%
