@@ -1,0 +1,28 @@
+---
+layout: page_content
+title: Repositories
+icon: fa-code
+type: information
+---
+<section>
+    <h5>Sorted by date</h5>
+    <div class="box alt">
+        <div class="row uniform 50%">
+            {% for post in site.posts %}
+            {% if post.category == 'Project' %}
+            <div class="4u 6u(small) 10u(vsmall) 12u(xsmall)">
+                <a href="{{ post.url | replace:'.html','' | prepend: site.url_dir | replace: '//','/' }}" class="image fit shadow">
+                    <h4 class="overlay"><span>{{ post.title }}</span></h4>
+                    <img data-sizes="auto"
+                    data-src="{{ post.thumb | prepend: 'img/' | prepend: site.url_dir }}"
+                    data-srcset="{{ post.thumb | prepend: 'img/' | prepend: site.url_dir }} 300w,
+                    {{ post.thumb | prepend: 'img/' | prepend: site.url_dir }} 600w,
+                    {{ post.thumb | prepend: 'img/' | prepend: site.url_dir }} 900w"
+                    alt="{{ post.title }}" title="{{ post.title }}" class="lazyload">
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
