@@ -1,9 +1,9 @@
-@import 'vars'       ;
-@import 'functions'  ;
-@import 'mixins'     ;
-@import 'skel'       ;
-@import 'fontawesome';
-@import 'fonts'      ;
+@import 'vars'           ;
+@import 'functions'      ;
+@import 'mixins'         ;
+@import 'skel'           ;
+@import 'fonts'          ;
+@import 'fontawesome'    ;
 @import 'library-buttons';
 
 @include skel-breakpoints((
@@ -21,10 +21,14 @@
         grid: ( gutters: 1.5em )
     ));
 
+//@import 'reset'       ; // included in critical.scss
+//@import 'theme/layout'; // included in critical.scss
+//@import 'theme/banner'; // included in critical.scss
+//@import 'theme/header'; // included in critical.scss
+//@import 'theme/menu'  ; // included in critical.scss
 @import 'theme/logo'   ;
 @import 'theme/custom' ;
 @import 'theme/syntax' ;
-//@import 'theme/menu'   ;
 @import 'theme/content';
 @import 'theme/footer' ;
 

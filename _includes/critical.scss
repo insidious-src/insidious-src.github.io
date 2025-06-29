@@ -1,10 +1,9 @@
 $imgurl: '{{ site.url_dir }}img';
 
-@import 'reset'       ;
 @import 'vars'        ;
 @import 'functions'   ;
 @import 'mixins'      ;
-//@import 'fontawesome' ;
+@import 'reset'       ;
 @import 'theme/layout';
 @import 'theme/banner';
 @import 'theme/header';
