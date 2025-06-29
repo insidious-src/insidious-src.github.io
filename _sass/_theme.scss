@@ -5,6 +5,12 @@
 @import 'fontawesome';
 @import 'fonts'      ;
 @import 'library-buttons';
+@import 'theme/logo'   ;
+@import 'theme/custom' ;
+@import 'theme/syntax' ;
+//@import 'theme/menu'   ;
+@import 'theme/content';
+@import 'theme/footer' ;
 
 @include skel-breakpoints((
         xlarge: '(max-width: 1680px)',
@@ -20,13 +26,6 @@
         boxModel: 'border',
         grid: ( gutters: 1.5em )
     ));
-
-@import 'theme/logo'   ;
-@import 'theme/custom' ;
-@import 'theme/syntax' ;
-//@import 'theme/menu'   ;
-@import 'theme/content';
-@import 'theme/footer' ;
 
 /* Basic */
 
@@ -54,7 +53,8 @@ body, input, select, textarea {
 
 a {
     @include vendor('transition', ('color #{_duration(transitions)} ease', 'border-bottom-color #{_duration(transitions)} ease'));
-    border-bottom: dotted 1px;
+    border-image: linear-gradient(to right, transparent, rgb(128, 140, 176), transparent) 1;
+    border-bottom: 1px solid;
     color: inherit;
     text-decoration: none;
 
@@ -335,7 +335,8 @@ select {
 }
 
 input[type="checkbox"],
-input[type="radio"], {
+input[type="radio"]
+{
     @include vendor('appearance', 'none');
     display: block;
     float: left;
