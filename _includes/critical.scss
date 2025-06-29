@@ -4,6 +4,7 @@ $imgurl: '{{ site.url_dir }}img';
 @import 'vars'        ;
 @import 'functions'   ;
 @import 'mixins'      ;
+@import 'fontawesome' ;
 @import 'theme/layout';
 @import 'theme/banner';
 @import 'theme/header';
