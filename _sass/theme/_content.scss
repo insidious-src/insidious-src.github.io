@@ -299,10 +299,10 @@
     }
 
     @include breakpoint(medium) {
-        padding: 4em, 3em;
+        padding: 4em 3em;
     }
 
     @include breakpoint(small) {
-        padding: 3em, 2em;
+        padding: 3em 2em;
     }
 }
