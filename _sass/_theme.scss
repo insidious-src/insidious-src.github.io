@@ -5,12 +5,6 @@
 @import 'fontawesome';
 @import 'fonts'      ;
 @import 'library-buttons';
-@import 'theme/logo'   ;
-@import 'theme/custom' ;
-@import 'theme/syntax' ;
-//@import 'theme/menu'   ;
-@import 'theme/content';
-@import 'theme/footer' ;
 
 @include skel-breakpoints((
         xlarge: '(max-width: 1680px)',
@@ -26,6 +20,13 @@
         boxModel: 'border',
         grid: ( gutters: 1.5em )
     ));
+
+@import 'theme/logo'   ;
+@import 'theme/custom' ;
+@import 'theme/syntax' ;
+//@import 'theme/menu'   ;
+@import 'theme/content';
+@import 'theme/footer' ;
 
 /* Basic */
 
