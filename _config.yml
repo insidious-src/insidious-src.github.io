@@ -72,8 +72,8 @@ social:
 # Build settings
 markdown: kramdown
 
-sass:
-    style: compressed
+#sass:
+    #style: compressed
 
 compress_html:
     clippings: all
