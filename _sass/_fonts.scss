@@ -238,7 +238,7 @@
 
 @font-face {
     font-family: 'jaapokki-subtract';
-    src: url('../fonts/jaapokkisubtract-regular.ttf'),
+    src: url('../fonts/jaapokkisubtract-regular.ttf'), url('../fonts/jaapokkisubtract-regular.woff2') format('woff2'),
     url('../fonts/jaapokkisubtract-regular.eot'); // IE
     font-display: swap;
 }
