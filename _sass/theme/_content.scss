@@ -38,7 +38,7 @@
             padding: 0;
 
             h2 {
-                @include vendor('border-image', 'linear-gradient(to right, transparent, rgb(125, 125, 130), transparent) 1');
+                @include vendor('border-image', 'linear-gradient(to right, transparent, #fff, transparent) 1');
                 border-bottom: 1px solid;
             }
 

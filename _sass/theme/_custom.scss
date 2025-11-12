@@ -332,93 +332,93 @@ $conduit-pulse-color: rgb(255, 255, 255);
 @mixin animation-conduit-current($name, $first_direction, $second_direction) {
     @include keyframe($name) {
         0% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 3%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 3%, _palette(accent1, border3) 60%) 1;
         }
 
         5% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 5%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 5%, _palette(accent1, border3) 60%) 1;
         }
 
         10% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 15%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 15%, _palette(accent1, border3) 60%) 1;
         }
 
         15% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 30%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 30%, _palette(accent1, border3) 60%) 1;
         }
 
         20% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 40%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 40%, _palette(accent1, border3) 60%) 1;
         }
 
         25% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 50%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 50%, _palette(accent1, border3) 60%) 1;
         }
 
         30% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 60%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 60%, _palette(accent1, border3) 60%) 1;
         }
 
         35% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 70%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 70%, _palette(accent1, border3) 60%) 1;
         }
 
         40% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 80%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 80%, _palette(accent1, border3) 60%) 1;
         }
 
         45% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 90%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 90%, _palette(accent1, border3) 60%) 1;
         }
 
         50% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border), $conduit-pulse-color 97%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 97%, _palette(accent1, border3) 60%) 1;
         }
 
         // ==================================
 
         51% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 3%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 3%, _palette(accent1, border3) 60%) 1;
         }
 
         55% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 5%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 5%, _palette(accent1, border3) 60%) 1;
         }
 
         60% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 15%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 15%, _palette(accent1, border3) 60%) 1;
         }
 
         65% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 30%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 30%, _palette(accent1, border3) 60%) 1;
         }
 
         70% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 40%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 40%, _palette(accent1, border3) 60%) 1;
         }
 
         75% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 50%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 50%, _palette(accent1, border3) 60%) 1;
         }
 
         80% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 60%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 60%, _palette(accent1, border3) 60%) 1;
         }
 
         85% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 70%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 70%, _palette(accent1, border3) 60%) 1;
         }
 
         90% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 80%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 80%, _palette(accent1, border3) 60%) 1;
         }
 
         95% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 90%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 90%, _palette(accent1, border3) 60%) 1;
         }
 
         100% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border), $conduit-pulse-color 97%, _palette(accent1, border) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 97%, _palette(accent1, border3) 60%) 1;
         }
     }
 }
@@ -433,14 +433,14 @@ $conduit-pulse-color: rgb(255, 255, 255);
 
 .conduit-border {
     > * {
-        border-bottom: solid $conduit-width _palette(accent1, border);
-        border-left: solid $conduit-width _palette(accent1, border);
+        border-bottom: solid $conduit-width _palette(accent1, border3);
+        border-left: solid $conduit-width _palette(accent1, border3);
         margin: 0 !important;
         @include vendor('transition', 'all 0.5s linear');
 
         &:nth-child(2n) {
             border-left: 0;
-            border-right: solid $conduit-width _palette(accent1, border);
+            border-right: solid $conduit-width _palette(accent1, border3);
         }
 
         &:last-child {
