@@ -340,11 +340,19 @@ $conduit-pulse-color: rgb(255, 255, 255);
         }
 
         10% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 15%, _palette(accent1, border3) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 10%, _palette(accent1, border3) 60%) 1;
+        }
+
+        13% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 13%, _palette(accent1, border3) 60%) 1;
         }
 
         15% {
-            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 30%, _palette(accent1, border3) 60%) 1;
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 15%, _palette(accent1, border3) 60%) 1;
+        }
+
+        17% {
+            border-image: linear-gradient(to $first_direction, _palette(accent1, border3), $conduit-pulse-color 17%, _palette(accent1, border3) 60%) 1;
         }
 
         20% {
@@ -418,7 +426,7 @@ $conduit-pulse-color: rgb(255, 255, 255);
         }
 
         100% {
-            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 97%, _palette(accent1, border3) 60%) 1;
+            border-image: linear-gradient(to $second_direction, _palette(accent1, border3), $conduit-pulse-color 100%, _palette(accent1, border3) 60%) 1;
         }
     }
 }
