@@ -11,10 +11,12 @@ status: wip
 <div class="box alt">
     <div class="row uniform 50%">
         <div class="4u 6u(small) 10u(vsmall) 12u(xsmall)">
-            <a href="https://www.youtube.com/watch?v=TkWv3ZzwOlI">
-                <img src="https://img.youtube.com/vi/TkWv3ZzwOlI/0.webp" alt="{{ page.title }} Trailer">
+            <a href="https://youtu.be/TkWv3ZzwOlI">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TkWv3ZzwOlI?si=8bLmEYeIEI3-olol" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </a>
         </div>
+    </div>
+    <div class="row uniform 50%">
         <div class="4u 6u(small) 10u(vsmall) 12u(xsmall)">
             <img src="{{ site.url_dir }}img/scrngrabbz8.webp" alt="{{ page.title }} Trailer">
         </div>
