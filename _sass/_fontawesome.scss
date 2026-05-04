@@ -1,18 +1,18 @@
 /*!
- *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ * Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2026 Fonticons, Inc.
  */
+// Font Awesome core compile (Web Fonts-based)
+// -------------------------
 
-@import 'fontawesome/variables';
-@import 'fontawesome/mixins';
-@import 'fontawesome/path';
-@import 'fontawesome/core';
-@import 'fontawesome/larger';
-@import 'fontawesome/fixed-width';
-@import 'fontawesome/list';
-@import 'fontawesome/bordered-pulled';
-@import 'fontawesome/animated';
-@import 'fontawesome/rotated-flipped';
-@import 'fontawesome/stacked';
-@import 'fontawesome/icons';
-@import 'fontawesome/screen-reader';
+@use 'fontawesome7/core';
+@use 'fontawesome7/sizing';
+@use 'fontawesome7/widths';
+@use 'fontawesome7/list';
+@use 'fontawesome7/bordered';
+@use 'fontawesome7/pulled';
+@use 'fontawesome7/animated';
+@use 'fontawesome7/rotated-flipped';
+@use 'fontawesome7/stacked';
+@use 'fontawesome7/icons';
